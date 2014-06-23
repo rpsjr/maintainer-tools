@@ -53,4 +53,5 @@ This is only experimentation. We will maybe use another tool or automate the mig
       remotes/origin/master 94754ca Launchpad automatic translations update.
     $ git remote add github GITHUB URL
     $ git push github --all
+    $ git push github --tags
 
