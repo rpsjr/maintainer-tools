@@ -38,3 +38,5 @@ The branch(es) will be moved to GitHub.
 
 I open the new branch https://github.com/guewen/connector-magento/tree/7.0-update-stock-1330450
 and create the pull request. I put the link to the original Launchpad request for the reviewers and committers.
+
+Result here: https://github.com/OCA/connector-magento/pull/1
