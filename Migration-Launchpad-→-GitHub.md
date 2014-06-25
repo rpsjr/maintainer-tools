@@ -54,4 +54,4 @@ This is only experimentation. We will maybe use another tool or automate the mig
     $ git remote add github GITHUB URL
     $ git push github --all
     $ git push github --tags
-
+    $ git push github refs/remotes/6.1/master:refs/heads/6.1
