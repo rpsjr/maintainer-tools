@@ -7,7 +7,11 @@ https://code.launchpad.net/~camptocamp/openerp-connector-magento/7.0-update-stoc
 
 **Instructions on** https://github.com/OCA/maintainers-tools#installation
 
-## Create a mapping file (in `yaml`)
+## Fork the repo
+
+I go on https://github.com/OCA/connector-magento and I Fork the repo in my account, so I have https://github.com/guewen/connector-magento.
+
+## Create a mapping file (in `yaml` format)
 
 On this model:
 
@@ -29,3 +33,8 @@ You can declare several projects or branches at once.
     $ oca-copy-branches branches --push --mapping mapping.yml
 
 The branch(es) will be moved to GitHub.
+
+## Open the Pull Request
+
+I open the new branch https://github.com/guewen/connector-magento/tree/7.0-update-stock-1330450
+and create the pull request. I put the link to the original Launchpad request for the reviewers and committers.
