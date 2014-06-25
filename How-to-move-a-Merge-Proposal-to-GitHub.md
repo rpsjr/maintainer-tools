@@ -25,7 +25,7 @@ You can declare several projects or branches at once.
 
 ## Run the command
   
-  $ mkdir branches
-  $ oca-copy-branches branches --push --mapping mapping.yml
+    $ mkdir branches
+    $ oca-copy-branches branches --push --mapping mapping.yml
 
 The branch(es) will be moved to GitHub.
