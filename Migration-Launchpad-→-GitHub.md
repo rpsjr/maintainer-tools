@@ -1,43 +1,29 @@
 # Migration Launchpad → GitHub
 
-## Volunteers
+## Migration steps
 
-* Pedro Manuel Baeza Romero
-* Bidoul, Stéphane
-* Leonardo Pistone
-* Raphael Valyi
+1. Run the `oca-copy-branches` command to copy the branches on GitHub
+2. On all the Launchpad projects, set the branches of the series to 'abandoned' and create mirror branches from GitHub instead with the `Import a branch` feature. (see https://bugs.launchpad.net/launchpad/+bug/380871/comments/32 for branches)
+3. In the meantime, check if projects have series (6.0, 5.0) that were not in the mapping file, and in that case, migrate them with `oca-copy-branches`
+4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects
+5. Set all the modules of the master branches to `installable: False`
+6. Educate developers on the migration of their Launchpad MP to GitHub PR (https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub)
+7. Migrate issues?
+
+Some of the tasks will be distributed among the maintainers.
 
 ## Tasks
-
-* Create a mapping of projects/branches Launchpad → Github that will be
-used by the scripts
-
-* At some point, push the head 7.0 branch of each Launchpad project to
-their corresponding Github project as the new 8.0. This can be automated
-I guess (using the mapping)
-* Write a script that mirrors the 6.1 and 7.0 branches to Github and
-setup a cron (maybe useless if the branches are moved to GitHub as masters)
-
-* On Github, each project of the OCA has its own list of committers,
-there is no way to put the OCA committers automatically in each OCA
-project. What we'll do is to maintain 1 committer team [0] and to write
-a script (with a cron) that copies all the members in all the others
-projects' teams. **done** in https://github.com/OCA/maintainers-tools
-
 * We have to decide where the OCA should deploy its tools (like the
 mirroring script and committers script, and maybe others to come)
 
-This is the minimal scope, but we would be more comfortable with:
-
 * a "nag" script for Github (openerp-nag equivalent), but I don't know
 Github enough to know if Github is sufficient by itself
+
 * CI installed on all the OCA projects
 
-# How to migrate a project
+# Experiments with `git-remote-bzr`
 
-This is only experimentation. We will maybe use another tool or automate the migration.
-
-### Using https://github.com/felipec/git-remote-bzr
+Using https://github.com/felipec/git-remote-bzr
 
     $ git clone "bzr::lp:sale-wkfl/7.0" sale-wkfl
     Cloning into 'sale-wkfl'...
