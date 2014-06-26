@@ -28,6 +28,7 @@ This URL will import the HEAD of `master`. The other branches are imported using
 
 The git protocol works better than https.
 
+See the branches `lp:~gbaconnier-c2c/openerp-connector/github-7.0` and `lp:~gbaconnier-c2c/openerp-connector/github-master` on https://code.launchpad.net/openerp-connector.
 
 
 ## Experiments with `git-remote-bzr`
