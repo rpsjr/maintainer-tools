@@ -41,7 +41,7 @@ It should be in this form: `git://github.com/OCA/connector.git`.
 This URL will import the HEAD of `master`. The other branches are imported using the `,branch=BRANCH_NAME` suffix, example: `git://github.com/OCA/connector.git,branch=7.0`.
 The git protocol works better than https.
 
-Example: the branches `lp:~gbaconnier-c2c/openerp-connector/github-7.0` and `lp:~gbaconnier-c2c/openerp-connector/github-master` on https://code.launchpad.net/openerp-connector.
+Example: the branches https://code.launchpad.net/~openerp-connector-core-editors/openerp-connector/github-7.0 and https://code.launchpad.net/~gbaconnier-c2c/openerp-connector/github-master.
 
 
 ## Experiments with `git-remote-bzr`
