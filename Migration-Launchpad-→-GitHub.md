@@ -21,7 +21,17 @@ Github enough to know if Github is sufficient by itself
 
 * CI installed on all the OCA projects
 
-# Experiments with `git-remote-bzr`
+## Notes on the Launchpad mirroring
+
+When importing a Git branch, Launchpad asks for the branch URL.
+It should be in this form: `git://github.com/OCA/connector.git`.
+This URL will import the HEAD of `master`. The other branches are imported using the `,branch=BRANCH_NAME` suffix, example: `git://github.com/OCA/connector.git,branch=7.0`.
+
+The git protocol works better than https.
+
+
+
+## Experiments with `git-remote-bzr`
 
 Using https://github.com/felipec/git-remote-bzr
 
