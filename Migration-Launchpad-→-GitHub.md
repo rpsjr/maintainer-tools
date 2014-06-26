@@ -20,15 +20,25 @@ Github enough to know if Github is sufficient by itself
 
 * CI installed on all the OCA projects
 
-## Notes on the Launchpad mirroring
+## Help on the Launchpad mirroring
+
+1. Go to the `Code` tab of the Launchpad project.
+1. On the right, click on `Import a branch`
+1. Check that the `Owner` is the team of the project
+1. In `Branch Name`, put `github-7.0` where 7.0 is the serie
+1. Select `Git` and set the URL, example: `git://github.com/OCA/connector.git,branch=7.0`
+1. `Request Import`
+1. Edit the `7.0` serie and change its branch to the new `github-7.0` branch
+1. Repeat that for the other series of the project
+
+Notes on the URL:
 
 When importing a Git branch, Launchpad asks for the branch URL.
 It should be in this form: `git://github.com/OCA/connector.git`.
 This URL will import the HEAD of `master`. The other branches are imported using the `,branch=BRANCH_NAME` suffix, example: `git://github.com/OCA/connector.git,branch=7.0`.
-
 The git protocol works better than https.
 
-See the branches `lp:~gbaconnier-c2c/openerp-connector/github-7.0` and `lp:~gbaconnier-c2c/openerp-connector/github-master` on https://code.launchpad.net/openerp-connector.
+Example: the branches `lp:~gbaconnier-c2c/openerp-connector/github-7.0` and `lp:~gbaconnier-c2c/openerp-connector/github-master` on https://code.launchpad.net/openerp-connector.
 
 
 ## Experiments with `git-remote-bzr`
