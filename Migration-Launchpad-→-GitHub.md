@@ -4,7 +4,7 @@
 
 1. Run the `oca-copy-branches` command to copy the branches on GitHub (https://github.com/OCA/maintainers-tools#usage)
 2. On all the Launchpad projects, set the branches of the series to 'abandoned' and create mirror branches from GitHub instead with the `Import a branch` feature. **Manual step** to distribute between maintainers
-3. In the meantime, check if projects have series (6.0, 5.0) that were not in the mapping file, and in that case, migrate them with `oca-copy-branches` **Manual step** to distribute between maintainers
+3. In the meantime, check if projects have series (6.0, 5.0) that were not in the mapping file, and in that case, migrate them with `oca-copy-branches` **Manual step** to distribute between maintainers. The current mapping is here: https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml thanks to check for missing branches
 4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. *Script?*
 5. Set all the modules of the master branches to `installable: False`. *Script?*
 6. Educate developers on the migration of their Launchpad MP to GitHub PR (https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub)
