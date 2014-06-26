@@ -9,7 +9,7 @@ Method using only Git and `git-remote-bzr`.
 
 ### Install the tool
 
-**Instructions to install `git-remote-bzr` on** https://github.com/felipec/git-remote-bzr
+* **Instructions to install `git-remote-bzr` on** https://github.com/felipec/git-remote-bzr
 
 ### Fork the repo
 
@@ -44,8 +44,8 @@ This may be more convenient if you need to copy several branches at once.
 
 ### Install the tool
 
-**Instructions to install `git-remote-bzr` on** https://github.com/felipec/git-remote-bzr
-**Instructions to install `oca-copy-branches` on** https://github.com/OCA/maintainers-tools#installation
+* **Instructions to install `git-remote-bzr` on** https://github.com/felipec/git-remote-bzr
+* **Instructions to install `oca-copy-branches` on** https://github.com/OCA/maintainers-tools#installation
 
 ### Fork the repo
 
