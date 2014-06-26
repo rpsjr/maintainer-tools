@@ -13,8 +13,7 @@
 Some of the tasks will be distributed among the maintainers.
 
 ## Tasks
-* We have to decide where the OCA should deploy its tools (like the
-mirroring script and committers script, and maybe others to come)
+* We have to decide where the OCA should deploy its tools (like the script that copies the maintainers in the teams, and maybe others to come)
 
 * a "nag" script for Github (openerp-nag equivalent), but I don't know
 Github enough to know if Github is sufficient by itself
