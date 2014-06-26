@@ -7,6 +7,9 @@
 3. In the meantime, check if projects have series (6.0, 5.0) that were not in the mapping file, and in that case, migrate them with `oca-copy-branches` **Manual step** to distribute between maintainers. The current mapping is here: https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml thanks to check for missing branches
 4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. *Script?*
 5. Set all the modules of the master branches to `installable: False`. *Script?*
+
+        ack installable --py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
+
 6. Communicate and educate developers on the migration of their Launchpad MP to GitHub PR using guides (https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub). Inform them on the MP that they have to move them.
 7. Migrate issues? (see https://github.com/termie/lp2gh)
 
