@@ -19,7 +19,8 @@ How to migrate one project:
 
 5. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
 
-        ack installable --py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
+        grep installable */__openerp__.py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
+        find . -mindepth 1  -maxdepth 1 -type d -not -path '*/\.*'  -execdir git mv {} {}_unported \;
 
 6. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
 
