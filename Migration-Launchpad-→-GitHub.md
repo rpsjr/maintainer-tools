@@ -23,9 +23,9 @@ How to migrate one project:
 
 6. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
 
-> 
+> This project is now hosted on https://github.com/OCA/connector. Please move your proposal there. This guide may help you https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub
 
-8. Comment the project in the Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
+8. Comment out the project in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
 
 
 ## Tasks
