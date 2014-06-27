@@ -6,7 +6,7 @@ How to migrate one project:
 
 **Prerequisite**: Install https://github.com/OCA/maintainers-tools#installation
 
-1. Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) if all the branches to migrate have been declared (series 6.0 and 5.0 may be missing). Correct the mapping file if necessary and commit the change.
+1. Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) if all the branches to migrate have been declared (series 6.0 and 5.0 may be missing). Correct the mapping file if necessary and commit the change. `master` will be the 8.0 branch.
 
 2. Run the `oca-copy-branches` command to copy the branches on GitHub (https://github.com/OCA/maintainers-tools#usage)
 
