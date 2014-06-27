@@ -15,7 +15,7 @@ How to migrate one project:
 
 3. On the Launchpad project, set the branches of the series to 'abandoned' and create mirror branches from GitHub with the `Import a branch` feature. Then link the series to the mirror branches. (see **Help on the Launchpad mirroring**)
 
-4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to a github branch, so you may have to repeat operation for each github branch.
+4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
 
 5. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
 
