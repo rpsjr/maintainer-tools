@@ -2,20 +2,38 @@
 
 ## Migration steps
 
-1. Run the `oca-copy-branches` command to copy the branches on GitHub (https://github.com/OCA/maintainers-tools#usage)
-2. On all the Launchpad projects, set the branches of the series to 'abandoned' and create mirror branches from GitHub instead with the `Import a branch` feature. Then link the series to the mirror branches. **Manual step** to distribute between maintainers
-3. In the meantime, check if projects have series (6.0, 5.0) that were not in the mapping file, and in that case, migrate them with `oca-copy-branches` **Manual step** to distribute between maintainers. The current mapping is here: https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml thanks to check for missing branches
-4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. *Script?*
-5. Set all the modules of the master branches to `installable: False`. *Script?*
+How to migrate one project:
+
+**Prerequisite**: Install https://github.com/OCA/maintainers-tools#installation
+
+1. Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) if all the branches to migrate have been declared (series 6.0 and 5.0 may be missing). Correct the mapping file if necessary and commit the change.
+
+2. Run the `oca-copy-branches` command to copy the branches on GitHub (https://github.com/OCA/maintainers-tools#usage)
+
+        $ mkdir branches
+        $ oca-copy-branches branches --projects OCA/connector --push
+
+3. On the Launchpad project, set the branches of the series to 'abandoned' and create mirror branches from GitHub with the `Import a branch` feature. Then link the series to the mirror branches. (see **Help on the Launchpad mirroring**)
+
+4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 
+
+5. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
 
         ack installable --py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
 
-6. Communicate and educate developers on the migration of their Launchpad MP to GitHub PR using guides (https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub). Inform them on the MP that they have to move them.
-7. Migrate issues? (see https://github.com/termie/lp2gh)
+6. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
 
-Some of the tasks will be distributed among the maintainers.
+> 
+
+8. Comment the project in the Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
+
 
 ## Tasks
+
+* 6. Communicate and educate developers on the migration, especially of their Launchpad MP to GitHub PR using guides (https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub).
+
+* Migrate issues? (see https://github.com/termie/lp2gh)
+
 * We have to decide where the OCA should deploy its tools (like the script that copies the maintainers in the teams, and maybe others to come)
 
 * a "nag" script for Github (openerp-nag equivalent), but I don't know
