@@ -35,7 +35,7 @@ How to migrate one project:
 
 * Migrate issues? (see https://github.com/termie/lp2gh)
 
-* We have to decide where the OCA should deploy its tools (like the script that copies the maintainers in the teams, and maybe others to come)
+* Board has to decide where the OCA should deploy its tools (runbot, script that copies the maintainers in the teams, and maybe others to come)
 
 * a "nag" script for Github (openerp-nag equivalent), but I don't know
 Github enough to know if Github is sufficient by itself
