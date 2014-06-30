@@ -15,18 +15,18 @@ How to migrate one project:
 
 3. On the Launchpad project, set the branches of the series to 'abandoned' and create mirror branches from GitHub with the `Import a branch` feature. Then link the series to the mirror branches. (see **Help on the Launchpad mirroring**)
 
-4. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
+4. Comment out the project in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
 
-5. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
+5. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
+
+6. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
 
         grep installable */__openerp__.py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
         find . -mindepth 1  -maxdepth 1 -type d -not -path '*/\.*'  -execdir git mv {} {}_unported \;
 
-6. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
+7. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
 
     > This project is now hosted on https://github.com/OCA/connector. Please move your proposal there. This guide may help you https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub
-
-7. Comment out the project in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
 
 
 ## Tasks
