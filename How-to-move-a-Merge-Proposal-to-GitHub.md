@@ -25,9 +25,16 @@ I add the remote from the `bzr` branch:
     $ git remote add 7.0-update-stock-1330450 bzr::lp:~camptocamp/openerp-connector-magento/7.0-update-stock-1330450
     $ git fetch 7.0-update-stock-1330450
 
+If you are not a maintainer of the project, fork it on GitHub and add it as remote:
+    $ git remote add <my_login> https://github.com/<my_login>/connector-magento.git
+
+Now, you must make a branch of your remote:
+
+    $ git checkout -b my_port_of_7.0-update-stock-1330450 7.0-update-stock-1330450
+
 I push the remote branch to GitHub
 
-    $ git push origin refs/remotes/7.0-update-stock-1330450:refs/head/7.0-update-stock-1330450
+    $ git push <my_login> my_port_of_7.0-update-stock-1330450:7.0-update-stock-1330450
 
 My branch is now in GitHub
 
