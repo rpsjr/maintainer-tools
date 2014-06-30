@@ -26,7 +26,7 @@ How to migrate one project:
         grep installable */__openerp__.py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
         find . -mindepth 1  -maxdepth 1 -type d -not -path '*/\.*'  -execdir git mv {} {}_unported \;
 
-8. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP. Example:
+8. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP (but do now "reject" the MP which makes them difficult to track for the authors). Example:
 
     > This project is now hosted on https://github.com/OCA/connector. Please move your proposal there. This guide may help you https://github.com/OCA/maintainers-tools/wiki/How-to-move-a-Merge-Proposal-to-GitHub
 
