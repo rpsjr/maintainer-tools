@@ -8,7 +8,7 @@ How to migrate one project:
 
 1. Check in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) if all the branches to migrate have been declared (series 6.0 and 5.0 may be missing). Correct the mapping file if necessary and commit the change. `master` will be the 8.0 branch.
 
-2. Run the `oca-copy-branches` command to copy the branches on GitHub (https://github.com/OCA/maintainers-tools#usage). (useless if the branches are already up-to-date compared to Launchpad)
+2. If the GitHub branches are not up-to-date compared to Launchpad, run the `oca-copy-branches` command to copy the branches from Launchpad to GitHub (https://github.com/OCA/maintainers-tools#usage).
 
         $ mkdir -p branches
         $ oca-copy-branches branches --projects OCA/connector --push
