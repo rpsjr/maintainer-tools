@@ -21,9 +21,17 @@ How to migrate one project:
 
 6. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
 
-7. Set all the modules of the master branches to `installable: False` and rename the modules with a `_unported` suffix so they won't be tested by Travis
+7. Set all the modules of the master branches to `"installable": False`:
 
         grep installable */__openerp__.py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
+
+    Mind that some modules might not have the `installable` attribute defined. In those cases you need to edit the `__openerp__.py` file to add it. This command can help you detecting those cases:
+
+        egrep -w 'name|installable' */__openerp__.py
+
+    It's recommended to rename or move the the modules to more easily identify the unported ones.
+    This script renames the modules with a `_unported` suffix so they won't be tested by Travis:
+
         find . -mindepth 1  -maxdepth 1 -type d -not -path '*/\.*'  -execdir git mv {} {}_unported \;
 
 8. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP (but do not "reject" the MP which makes them difficult to track for the authors). Example:
