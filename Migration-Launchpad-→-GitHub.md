@@ -13,7 +13,7 @@ How to migrate one project:
         $ mkdir -p branches
         $ oca-copy-branches branches --projects OCA/connector --push
 
-3. On the Launchpad project, set the branches of the series to 'abandoned' and create mirror branches from GitHub with the `Import a branch` feature. Then link the series to the mirror branches. (see **Help on the Launchpad mirroring**)
+3. On the Launchpad project, set the branches of the series to 'abandoned' and create mirror branches from GitHub with the `Import a branch` feature. Then link the series to the mirror branches. (see [Help on the Launchpad mirroring](#help-on-the-launchpad-mirroring))
 
 4. On the Launchpad project, change the description which should now redirect to the GitHub project.
 
