@@ -1,5 +1,7 @@
 # Migration Launchpad → GitHub
 
+**Dashboard:** https://docs.google.com/spreadsheets/d/1CfGY7rc60jnpAWvMfNf0pI7fBDAlumwI2jx6f_RJ4_4/edit?pli=1#gid=0
+
 ## Migration steps
 
 How to migrate one project:
