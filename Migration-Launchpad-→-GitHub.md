@@ -31,10 +31,11 @@ How to migrate one project:
 
         egrep -w 'name|installable' */__openerp__.py
 
-    It's recommended to rename or move the the modules to more easily identify the unported ones.
-    This script renames the modules with a `_unported` suffix so they won't be tested by Travis:
+    It's recommended to rename or move the the modules to more easily identify the unported ones and avoid them to be considered by automated tests.
+    This script moves all modules into a `__unported__` directory:
 
-        find . -mindepth 1  -maxdepth 1 -type d -not -path '*/\.*'  -execdir git mv {} {}_unported \;
+        mkdir __unported__
+        find . -mindepth 1 -maxdepth 1 -type d -path './[a-z]*' -execdir git mv {} __unported__ \;
 
 8. Post messages on the pending merge proposals informing the authors that now the project is hosted on GitHub and they have to move their MP (but do not "reject" the MP which makes them difficult to track for the authors). Example:
 
