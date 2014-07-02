@@ -21,7 +21,7 @@ How to migrate one project:
 
 5. Comment out the project in the [Mapping  file](https://github.com/OCA/maintainers-tools/blob/master/tools/branches.yaml) and commit the change.
 
-6. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector/pull/2 . Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
+6. Add .gitignore, README.md, Travis and Coverage configuration files on the projects. Example: https://github.com/OCA/connector. Launchpad series were transposed to GitHub branches, so you will have to repeat the operation for each Git branch.
 
 7. Set all the modules of the master branches to `"installable": False`:
 
