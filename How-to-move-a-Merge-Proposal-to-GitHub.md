@@ -27,7 +27,7 @@ I add the remote from the `bzr` branch:
 
 I push the remote branch to GitHub
 
-    $ git push origin refs/remotes/7.0-update-stock-1330450/master:refs/head/7.0-update-stock-1330450 
+    $ git push origin refs/remotes/7.0-update-stock-1330450/master:refs/heads/7.0-update-stock-1330450 
 
 My branch is now in GitHub
 
