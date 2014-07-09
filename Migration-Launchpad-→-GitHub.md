@@ -27,7 +27,7 @@ How to migrate one project:
 
    Follow these examples for Travis:
    * .travis.yml config for master branch: https://github.com/OCA/connector/blob/master/.travis.yml
-   * .travis.yml config for 6.1 and 7.0 branches: https://github.com/gurneyalex/maintainer-quality-tools
+   * .travis.yml config for 6.1 and 7.0 branches: https://github.com/OCA/maintainer-quality-tools
 
 7. Set all the modules of the master branches to `"installable": False`:
 
