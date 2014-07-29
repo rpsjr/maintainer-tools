@@ -28,7 +28,7 @@ How to migrate one project:
 
    Follow this example for README.md: https://github.com/OCA/connector
 
-7. Set all the modules of the master branches to `"installable": False`:
+7. Set all the modules of the 8.0 branches to `"installable": False`:
 
         grep installable */__openerp__.py -l | xargs sed  "s/[\"|']installable[\"|']: True/'installable': False/" -i
 
