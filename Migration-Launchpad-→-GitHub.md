@@ -23,11 +23,10 @@ How to migrate one project:
 
 6. Add .gitignore, README.md, .travis.yml and .coveragerc configuration files on the projects. 
 
-   Follow this example for .gitignore, README.md and .coveragerc: https://github.com/OCA/connector
+   Follow these examples:
+   * https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files
 
-   Follow these examples for Travis:
-   * .travis.yml config for master branch: https://github.com/OCA/connector/blob/master/.travis.yml
-   * .travis.yml config for 6.1 and 7.0 branches: https://github.com/OCA/maintainer-quality-tools
+   Follow this example for README.md: https://github.com/OCA/connector
 
 7. Set all the modules of the master branches to `"installable": False`:
 
