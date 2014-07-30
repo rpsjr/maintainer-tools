@@ -26,7 +26,8 @@ How to migrate one project:
    Follow these examples:
    * https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files
 
-   Follow this example for README.md: https://github.com/OCA/connector
+   Follow this example for README.md:
+   * https://raw.githubusercontent.com/OCA/connector/7.0/README.md
 
 7. Set all the modules of the 8.0 branches to `"installable": False`:
 
