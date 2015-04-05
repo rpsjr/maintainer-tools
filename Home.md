@@ -1,5 +1,7 @@
-# Welcome to the maintainers wiki!
+# Conventions
+http://odoo-community.org/page/how-to
 
+# Migration
 * [[Migration to version 8]]
 
 # Launchpad
