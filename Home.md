@@ -1,5 +1,5 @@
 # How-to
-* Conventions
+* [[Conventions]]
 * [[Create a new repository]]
 
 # Migration
