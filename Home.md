@@ -1,5 +1,5 @@
-# Conventions
-http://odoo-community.org/page/how-to
+# How-to
+* Conventions
 * [[Create a new repository]]
 
 # Migration
