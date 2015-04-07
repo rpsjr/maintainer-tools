@@ -14,7 +14,7 @@
 * Use the description template (rst or html) provided on http://github.com/oca/maintainer-tools
 
 # Python Code
-* Follow Python PEP 8: http://www.python.org/dev/peps/pep-008/ 
+* Follow Python PEP 8: https://www.python.org/dev/peps/pep-0008/ 
 * Do not use deprecated features
 
 # XML Code
