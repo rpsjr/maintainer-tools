@@ -1,5 +1,6 @@
 # Conventions
 http://odoo-community.org/page/how-to
+* [[Create a new repository]]
 
 # Migration
 * [[Migration to version 8]]
