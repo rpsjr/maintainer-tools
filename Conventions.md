@@ -1,1 +1,1 @@
-Moved to https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.rst
+Moved to https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
