@@ -5,7 +5,8 @@
 * Make 8.0 default branch
 * Remove master branch
 
-Update yourself with the latest OCA Conventions https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+Update yourself with the latest OCA Conventions:
+https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
 * Migrate code to use new API
