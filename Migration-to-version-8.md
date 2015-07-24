@@ -1,10 +1,11 @@
 # Pre-migration tasks
-
 * Add 8.0 branch from 7.0
 * Move all modules to `__unported__/`
 * Edit .travis.yml and README.md to have the proper branch number
 * Make 8.0 default branch
 * Remove master branch
+
+Update yourself with the latest OCA Conventions https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
 * Migrate code to use new API
