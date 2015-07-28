@@ -15,3 +15,19 @@ https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 * Move icon.png file in /static/description
 * Use README.rst from http://github.com/oca/maintainer-tools
 * Add tests to increase code coverage
+
+# Howto
+
+Technical method to migrate "module" from "7.0" to "8.0"
+
+<pre>
+git clone git@github.com:OCA/repo.git (target OCA branch)
+cd repo
+git remote add myrepo git@github.com:user/repo.git
+git fetch myrepo
+git checkout OCA/8.0
+git checkout -b 8.0-module
+git filter-branch --subdirectory-filter module (This last step keeps and rewrites the history only for the selected addon.)
+git filter-branch -f --tree-filter 'mkdir -v module ; git mv -k * module' HEAD
+git rebase 8.0-module
+</pre>
