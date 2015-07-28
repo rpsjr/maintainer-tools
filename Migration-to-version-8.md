@@ -20,10 +20,10 @@ https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 Technical method to migrate "module" from "7.0" to "8.0"
 
-repo: the OCA repository hosting the module
-myrepo: your fork of the OCA repository
-user: your Github login
-module: the name of the module you want to migrate
+* repo: the OCA repository hosting the module
+* myrepo: your fork of the OCA repository
+* user: your Github login
+* module: the name of the module you want to migrate
 
 <pre>
 $ git clone git@github.com:OCA/repo.git # (target OCA branch)
