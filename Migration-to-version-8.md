@@ -20,14 +20,19 @@ https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 Technical method to migrate "module" from "7.0" to "8.0"
 
+repo: the OCA repository hosting the module
+myrepo: your fork of the OCA repository
+user: your Github login
+module: the name of the module you want to migrate
+
 <pre>
-git clone git@github.com:OCA/repo.git (target OCA branch)
-cd repo
-git remote add myrepo git@github.com:user/repo.git
-git fetch myrepo
-git checkout OCA/8.0
-git checkout -b 8.0-module
-git filter-branch --subdirectory-filter module (This last step keeps and rewrites the history only for the selected addon.)
-git filter-branch -f --tree-filter 'mkdir -v module ; git mv -k * module' HEAD
-git rebase 8.0-module
+$ git clone git@github.com:OCA/repo.git # (target OCA branch)
+$ cd repo
+$ git remote add myrepo git@github.com:user/repo.git
+$ git fetch myrepo
+$ git checkout OCA/8.0
+$ git checkout -b 8.0-module
+$ git filter-branch --subdirectory-filter module # (This last step keeps and rewrites the history only for the selected addon.)
+$ git filter-branch -f --tree-filter 'mkdir -v module ; git mv -k * module' HEAD
+$ git rebase 8.0-module
 </pre>
