@@ -13,7 +13,8 @@ Update yourself with the latest OCA Conventions:
 https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
-* 
+* Update README.rst from http://github.com/oca/maintainer-tools
+* Add tests to increase code coverage
 
 # Howto
 
