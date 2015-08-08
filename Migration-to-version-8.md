@@ -1,4 +1,7 @@
 # Pre-migration tasks
+
+Before migrating the first module of a repository, the following tasks must be performed:
+
 * Add 8.0 branch from 7.0
 * Move all modules to `__unported__/`
 * Edit .travis.yml and README.md to have the proper branch number
