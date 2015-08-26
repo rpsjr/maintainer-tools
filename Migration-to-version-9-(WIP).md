@@ -2,9 +2,8 @@
 
 Before migrating the first module of a repository, the following tasks must be performed:
 
-* Add 9.0 branch from 8.0
-* Remove all modules (git rm)
-* Edit .travis.yml and README.md to have the proper branch number
+* Create 9.0 branch from scratch. 
+* Add needed metafiles (.travis.yml, LICENSE, .gitignore, README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
 * Make 9.0 default branch
 * Remove master branch if it exists
 
