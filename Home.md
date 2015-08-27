@@ -4,7 +4,7 @@
 
 # Migration
 * [[Migration to version 8]]
-* [[WIP:Migration to version 9 (git-filter option)]]
+* [[WIP:Migration to version 9 (git filter option)]]
 
 # Launchpad
 * [Migration Launchpad → Github](https://github.com/OCA/maintainers-tools/wiki/Migration-Launchpad-%E2%86%92-GitHub)
