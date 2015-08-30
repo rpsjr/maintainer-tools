@@ -28,7 +28,7 @@ Technical method to migrate "module" from "8.0" to "9.0"
 <pre>
 $ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
 $ cd repo
-$ git chekout -b 9.0 origin/9.0
+$ git checkout -b 9.0 origin/9.0
 $ git checkout 8.0 -- module
 $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 9.0-module
