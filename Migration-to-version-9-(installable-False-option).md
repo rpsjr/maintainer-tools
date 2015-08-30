@@ -3,9 +3,9 @@
 Before migrating the first module, the following tasks must be performed:
 
 * Create 9.0 branch from 8.0
+* Update all modules manifest with installable = False
 * Update metafiles (.travis.yml, LICENSE, .gitignore, README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
 * Make 9.0 default branch
-* Mark all modules as installable = False
 * Remove master branch if it exists
 
 Update yourself with the latest OCA Conventions:
