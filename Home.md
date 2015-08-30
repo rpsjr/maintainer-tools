@@ -4,6 +4,7 @@
 
 # Migration
 * [[Migration to version 8]]
+
 WIP:
 * [[Migration to version 9 (git-filter option)]]
 * [[Migration to version 9 (installable False option)]]
