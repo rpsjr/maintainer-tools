@@ -12,6 +12,8 @@ Then:
 Finally, update the readme.md at the root of your repository to add the translation status:
 
 ```
-# Translation state
+Translation status
+------------------
+
 [![Transifex Status](https://www.transifex.com/projects/p/OCA-social-8-0/chart/image_png)](https://www.transifex.com/projects/p/OCA-social-8-0)
 ```
