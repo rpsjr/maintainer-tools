@@ -2,6 +2,9 @@
 * [[Conventions]]
 * [[Create a new repository]]
 
+# Translation
+* [[Activate Transifex]]
+
 # Migration
 * [[Migration to version 8]]
 
