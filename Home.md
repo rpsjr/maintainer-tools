@@ -8,7 +8,7 @@
 # Migration
 * [[Migration to version 8]]
 
-WIP:
+## WIP
 
 1.  [[Migration to version 9 (empty branch option)]]
 2.  [[Migration to version 9 (installable False option)]]
