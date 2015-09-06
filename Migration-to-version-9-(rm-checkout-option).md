@@ -29,7 +29,7 @@ Technical method to migrate "module" from "8.0" to "9.0"
 $ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
 $ cd repo
 $ git checkout -b 9.0-module
-$ git checkout 8.0 -- module
+$ [...] # git filter to get the history from 8.0 branch
 $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 9.0-module
 </pre>
