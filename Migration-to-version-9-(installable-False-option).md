@@ -25,6 +25,17 @@ Technical method to migrate "module" from "8.0" to "9.0"
 * user: your Github login
 * module: the name of the module you want to migrate
 
+Forward port the whole history:
+
+<pre>
+$ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
+$ cd repo
+$ git checkout -b 9.0 origin/9.0
+# git merge origin/8.0
+</pre>
+
+Or forward port the history of one module:
+
 <pre>
 $ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
 $ cd repo
