@@ -1,9 +1,12 @@
 Update yourself with the latest OCA Conventions:
+
 https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
 * Update README.rst from http://github.com/oca/maintainer-tools
 * Add tests to increase code coverage
+* Update code to remove use of deprecated methods
+* Update code to take advantage of new features
 
 # Howto
 
@@ -20,7 +23,7 @@ Forward port the whole history:
 $ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
 $ cd repo
 $ git checkout -b 9.0 origin/9.0
-# git merge origin/8.0
+$ git merge origin/8.0
 </pre>
 
 Or forward port the history of one module:
@@ -29,7 +32,7 @@ Or forward port the history of one module:
 $ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
 $ cd repo
 $ git checkout -b 9.0 origin/9.0
-$ [...] # git filter to get the history from 8.0 branch
+$ ??? # git filter to get the history from 8.0 branch
 $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 9.0-module
 </pre>
