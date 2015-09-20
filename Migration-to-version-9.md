@@ -1,15 +1,4 @@
-# Pre-migration tasks
-
-Before migrating the first module, the following tasks must be performed:
-
-* Create 9.0 branch from 8.0
-* Update all modules manifest with installable = False
-* Update metafiles (.travis.yml, LICENSE, .gitignore, README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
-* Make 9.0 default branch
-* Remove master branch if it exists
-
 Update yourself with the latest OCA Conventions:
-
 https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
@@ -44,3 +33,14 @@ $ [...] # git filter to get the history from 8.0 branch
 $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 9.0-module
 </pre>
+
+# Initialization
+
+Before migrating the first module, the following tasks must be performed:
+
+* Create 9.0 branch from 8.0
+* Move modules in `__unported__` up in the root directory
+* Update all modules manifest with installable = False
+* Update metafiles (.travis.yml, LICENSE, .gitignore, README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
+* Make 9.0 default branch
+* Remove master branch if it still exists
