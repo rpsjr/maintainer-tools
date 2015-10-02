@@ -1,4 +1,4 @@
-@ Before migrating
+# Before migrating
 
 * Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
