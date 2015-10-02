@@ -1,6 +1,8 @@
-Update yourself with the latest OCA Conventions:
+# Before migrating
 
-https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+* Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+* Subscribe to the mailing list of the related project: https://odoo-community.org/groups
+* Announce on the mailing list which modules you want to migrate
 
 # Todo
 * Update README.rst from http://github.com/oca/maintainer-tools
