@@ -1,16 +1,6 @@
-# Pre-migration tasks
+@ Before migrating
 
-Before migrating the first module of a repository, the following tasks must be performed:
-
-* Add 8.0 branch from 7.0
-* Move all modules to `__unported__/`
-* Edit .travis.yml and README.md to have the proper branch number
-* Make 8.0 default branch
-* Remove master branch
-
-Update yourself with the latest OCA Conventions:
-
-https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+* Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
 * Migrate code to use new API
@@ -39,3 +29,13 @@ $ git rebase 8.0
 $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 8.0-module
 </pre>
+
+# Initialization
+
+Before migrating the first module of a repository, the following tasks must be performed:
+
+* Add 8.0 branch from 7.0
+* Move all modules to `__unported__/`
+* Edit .travis.yml and README.md to have the proper branch number
+* Make 8.0 default branch
+* Remove master branch
