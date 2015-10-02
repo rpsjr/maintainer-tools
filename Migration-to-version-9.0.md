@@ -5,6 +5,7 @@
 * Announce on the mailing list which modules you want to migrate
 
 # Todo
+
 * Update README.rst from http://github.com/oca/maintainer-tools
 * Add tests to increase code coverage
 * Update code to remove use of deprecated methods
