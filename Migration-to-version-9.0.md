@@ -46,8 +46,8 @@ $ git push myrepo 9.0-module
 Before migrating the first module, the following tasks must be performed:
 
 * Create 9.0 branch from 8.0
-* Move modules in `__unported__` up in the root directory
+* Delete `__unported__` directory
 * Update all modules manifest with installable = False
-* Update metafiles (.travis.yml, LICENSE, .gitignore, README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
+* Update metafiles (.travis.yml and README.md), adapting them from the template in https://github.com/OCA/maintainer-quality-tools/tree/master/sample_files to have the proper data.
 * Make 9.0 default branch
 * Remove master branch if it still exists
