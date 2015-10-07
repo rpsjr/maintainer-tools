@@ -1,7 +1,3 @@
-# Before migrating
-
-* Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
-
 # Todo
 
 * Migrate code to use new API
@@ -9,7 +5,7 @@
  * Read section "Porting from the old API to the new API": https://www.odoo.com/documentation/8.0/reference/orm.html
  * http://odoo-new-api-guide-line.readthedocs.org/en/latest/index.html
 * Move files in models, views and data subdirectories
- * See the OCA conventions "Directories" section for more details
+ * Read the OCA conventions "Directories" section for more details: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 * Move icon.png file in /static/description
 * Copy and modify the README.rst template from https://github.com/OCA/maintainer-tools/tree/master/template/module
 * Update and add tests to increase code coverage http://odoo-new-api-guide-line.readthedocs.org/en/latest/test.html
