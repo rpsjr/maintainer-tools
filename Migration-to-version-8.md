@@ -43,6 +43,14 @@ $ git remote add myrepo git@github.com:user/repo.git
 $ git push myrepo 8.0-module
 </pre>
 
+# Cleanup
+
+After porting/migrating a module the following tasks must be performed:
+
+* Monitor your pull request for code reviews and improvements as well as to see if the module has passed quality tests
+* You will need 3 positive reviews to get your module merged. Ask the community if you want it to be reviewed faster
+* Remove the module from the `__unported__` folder
+
 # Initialization
 
 Before migrating the first module of a repository, the following tasks must be performed:
