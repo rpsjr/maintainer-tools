@@ -3,20 +3,36 @@
 * Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
 
 # Todo
+
 * Migrate code to use new API
+ * Familiarize yourself with the 8.0 API and differences with version 7: https://www.odoo.com/documentation/8.0/reference/orm.html
+ * Read section "Porting from the old API to the new API": http://odoo-new-api-guide-line.readthedocs.org/en/latest/index.html
 * Move files in models, views and data subdirectories
+ * See the OCA conventions "Directories" section for more details
 * Move icon.png file in /static/description
-* Use README.rst from http://github.com/oca/maintainer-tools
-* Add tests to increase code coverage
+* Copy and modify the README.rst template from https://github.com/OCA/maintainer-tools/tree/master/template/module
+* Update and add tests to increase code coverage http://odoo-new-api-guide-line.readthedocs.org/en/latest/test.html
 
-# Howto
+# Why
 
-Technical method to migrate "module" from "7.0" to "8.0"
+To work on OCA modules you will need to setup your work environment. The objective of the setup is to:
+
+* Use the OCA repository as your pull repository to get the latest version of the version 7.0 module code to convert.
+* Checkout only the module you wish to work on
+* Setup your own or your company’s github account with a fork of the OCA repository that contains the module you want to convert and set it up as your push repository.
+* Use your repository as a base to create a pull request (PR) to the OCA repository.
+* Keep the history of the 7.0 branch in the new 8.0 branch you will push.
+
+# How
+
+Replace the following variables and brackets with the appropriate values in the git commands below.
 
 * repo: the OCA repository hosting the module
 * myrepo: your fork of the OCA repository
 * user: your Github login
 * module: the name of the module you want to migrate
+
+Create your fork of the OCA repository before you start: https://help.github.com/articles/fork-a-repo/
 
 <pre>
 $ git clone git@github.com:OCA/repo.git -b 8.0 # (target OCA branch)
