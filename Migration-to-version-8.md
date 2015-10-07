@@ -5,8 +5,9 @@
 # Todo
 
 * Migrate code to use new API
- * Familiarize yourself with the 8.0 API and differences with version 7: https://www.odoo.com/documentation/8.0/reference/orm.html
- * Read section "Porting from the old API to the new API": http://odoo-new-api-guide-line.readthedocs.org/en/latest/index.html
+ * Familiarize yourself with the 8.0 API and differences with version 7
+ * Read section "Porting from the old API to the new API": https://www.odoo.com/documentation/8.0/reference/orm.html
+ * http://odoo-new-api-guide-line.readthedocs.org/en/latest/index.html
 * Move files in models, views and data subdirectories
  * See the OCA conventions "Directories" section for more details
 * Move icon.png file in /static/description
