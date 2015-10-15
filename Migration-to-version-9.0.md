@@ -11,6 +11,7 @@
 * Update code to remove use of deprecated methods
 * Update code to take advantage of new features
 * Bump module version to "9.0.1.0.0"
+* Replace `select = True` by `index = True`
 
 # Howto
 
