@@ -17,34 +17,55 @@
 
 # Howto
 
-Technical method to migrate "module" from "8.0" to "9.0"
+## Technical method to migrate a module from "8.0" to "9.0" branch
 
-* repo: the OCA repository hosting the module
-* myrepo: your fork of the OCA repository
-* user: your Github login
-* module: the name of the module you want to migrate
+* `<repo>`: the OCA repository hosting the module
+* `<module>`: the name of the module you want to migrate
+* `<user/org>`: your Github login or organization name
 
-Forward port the whole history:
+### If the module doesn't exist in the 9.0 branch:
 
-<pre>
-$ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
-$ cd repo
-$ git checkout -b 9.0 origin/9.0
-$ git merge origin/8.0
-</pre>
+```shell
+# Download repository
+git clone git@github.com:OCA/<repo>.git -b 8.0
+cd <repo>
+# Create branch for isolating the module
+git checkout -b 8.0-extract
+# Filter commits and rewrite history for only the selected module
+git filter-branch --subdirectory-filter <module_name>
+git filter-branch -f --tree-filter 'mkdir -v <module_name> ; git mv -k * <module_name>' HEAD
+# Go to 9.0 and merge filtered branch
+git checkout 9.0
+git checkout -b 9.0-<module>
+git merge 8.0-extract
+# Push to your repo
+git remote add <user/org> git@github.com:<user/org>/<repo>.git
+git push <user/org> 9.0-<module> --set-upstream
+```
 
-Or forward port the history of one module:
+### If the module already exists in the 9.0 branch, but it doesn't contain all the commit history (or you're not sure if it have it):
 
-<pre>
-$ git clone git@github.com:OCA/repo.git -b 9.0 # (target OCA branch)
-$ cd repo
-$ git checkout -b 9.0 origin/9.0
-$ ??? # git filter to get the history from 8.0 branch
-$ git remote add myrepo git@github.com:user/repo.git
-$ git push myrepo 9.0-module
-</pre>
+```shell
+# Download repository
+git clone git@github.com:OCA/<repo>.git -b 8.0
+cd <repo>
+# Create branch for isolating the module
+git checkout -b 8.0-extract
+# Filter commits and rewrite history for only the selected module
+git filter-branch --subdirectory-filter <module_name>
+git filter-branch -f --tree-filter 'mkdir -v <module_name> ; git mv -k * <module_name>' HEAD
+# Go to 9.0 and apply only filtered commits from the migration date
+git checkout 9.0
+git checkout -b 9.0-<module>
+git log refs/heads/8.0-extract --since=2015-10-14 --pretty=format:'%H' --reverse | while read line || [ -n "$line" ] ; do
+  git cherry-pick $line
+done
+# Push to your repo
+git remote add <user/org> git@github.com:<user/org>/<repo>.git
+git push <user/org> 9.0-<module> --set-upstream
+```
 
-# Initialization
+# Initialization (already done in OCA)
 
 Before migrating the first module, the following tasks must be performed:
 
