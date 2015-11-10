@@ -10,7 +10,7 @@
 * Add tests to increase code coverage
 * Update code to remove use of deprecated methods
 * Update code to take advantage of the new features
-* Preferibly migrate code to new ORM API.
+* Migrate code to new ORM API.
 * Bump module version to "9.0.1.0.0"
 * Replace `select = True` by `index = True`
 * Replace string selectors in XML by name (if possible) or other attribute selector or even another equivalent path/reference. For example, change `<group string="x" position="after">` by `<group name="x" position="after">`
