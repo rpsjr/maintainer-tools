@@ -3,7 +3,6 @@
 * [[Create a new repository]]
 
 # Translation
-=======
 * [[Activate Transifex]]
 
 # Migration
