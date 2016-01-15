@@ -14,6 +14,7 @@
 * Bump module version to "9.0.1.0.0"
 * Replace `select = True` by `index = True`
 * Replace string selectors in XML by name (if possible) or other attribute selector or even another equivalent path/reference. For example, change `<group string="x" position="after">` by `<group name="x" position="after">`
+* Remove `<data>` and `</data>` in xml files if `noupdate="0"`
 
 # Howto
 
