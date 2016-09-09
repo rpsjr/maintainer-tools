@@ -66,6 +66,37 @@ git remote add <user/org> git@github.com:<user/org>/<repo>.git
 git push <user/org> 9.0-<module> --set-upstream
 ```
 
+### Experimental procedure that works with merge commits and can be restarted in case of conflicts
+
+- First clone the repository.
+- Checkout the 9.0 branch: `git checkout 9.0`
+- Create a new branch for your migration: `git checkout -b 9.0-mig-<module_name>`
+- Run the script below
+- If it stops with an error (most probably a conflict or an empty merge commit), resolve the error and follow git's instructions (such as `git am --continue`). 
+- Then restart the script to process the next commits, until all succeed.
+
+```bash
+#!/bin/bash
+SOURCE_BRANCH=8.0
+TARGET_BRANCH=9.0
+SOURCE_PATH=<module_name>
+DONE_FILE=/tmp/mig-done-$SOURCE_PATH
+
+set -e
+# for each commit on SOURCE_BRANCH since the common ancestor of SOURCE and TARGET which touches SOURCE_PATH
+for sha in $(git log --oneline --reverse --format=%H $(git merge-base $SOURCE_BRANCH $TARGET_BRANCH)..$SOURCE_BRANCH $SOURCE_PATH)
+do
+    if grep -Fxq $sha $DONE_FILE
+    then
+        echo skipping $sha already in $DONE_FILE
+    else
+        echo applying $sha
+        echo $sha >> $DONE_FILE
+        git log -p --format=email -1 $sha -- $SOURCE_PATH | git am -3
+    fi
+done
+```
+
 # Initialization (already done in OCA)
 
 Before migrating the first module, the following tasks must be performed:
