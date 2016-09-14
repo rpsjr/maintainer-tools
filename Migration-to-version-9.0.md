@@ -69,10 +69,11 @@ git push <user/org> 9.0-<module> --set-upstream
 ### Experimental procedure that works with merge commits and can be restarted in case of conflicts
 
 - First clone the repository.
+- Checkout the 8.0 branch: `git checkout 8.0`.
 - Checkout the 9.0 branch: `git checkout 9.0`
 - Create a new branch for your migration: `git checkout -b 9.0-mig-<module_name>`
 - Run the script below
-- If it stops with an error (most probably a conflict or an empty merge commit), resolve the error and follow git's instructions (such as `git am --continue`). 
+- If it stops with an error (most probably a conflict or an empty merge commit), resolve the error and follow git's instructions (such as `git am --continue` or `git am --skip` for empty merges). 
 - Then restart the script to process the next commits, until all succeed.
 
 ```bash
