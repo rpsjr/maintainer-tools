@@ -31,7 +31,7 @@
 
 * `$REPO`: the OCA repository hosting the module
 * `$MODULE`: the name of the module you want to migrate
-* `$USER-ORG`: your GitHub login or organization name
+* `$USER_ORG`: your GitHub login or organization name
 
 ```bash
 $ git clone https://github.com/OCA/$REPO -b 9.0 # optional if already existing
@@ -43,10 +43,11 @@ $ ...
 $ git add --all
 $ git commit -m "[MIG] $MODULE: Migrated to 10.0"
 $ # optional if you already have your remote configured
-$ git remote add $USER-ORG git@github.com:$USER-ORG/$REPO.git # This mode requires an SSH key in the GitHub account
-$ git remote add https://github.com/$USER-ORG/$REPO.git # This will required to enter user/password each time
+$ git remote add $USER_ORG git@github.com:$USER_ORG/$REPO.git # This mode requires an SSH key in the GitHub account
+$ ... or ....
+$ git remote add $USER_ORG https://github.com/$USER_ORG/$REPO.git # This will required to enter user/password each time
 $ # push the changes to GitHub and make the PR
-$ git push $USER-ORG 10.0-mig-$MODULE --set-upstream
+$ git push $USER_ORG 10.0-mig-$MODULE --set-upstream
 ```
 
 # Initialization (already done in OCA)
