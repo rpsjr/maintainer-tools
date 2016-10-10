@@ -6,12 +6,17 @@
 
 # Tasks to do in the migration
 
-* Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to latest template.
+* Bump module version to "10.0.1.0.0"
+* Migrate code to new ORM API if not yet.
+* Replace `openerp` imports to `odoo`. You can use this command:
+
+  ```bash
+  find . -type f -name '*.py' | xargs sed -i 's/from openerp import/from odoo import/g'
+  ```
+* Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to the latest template.
 * Add tests to increase code coverage.
 * Update code to remove use of deprecated methods.
 * Update code to take advantage of the new features.
-* Migrate code to new ORM API if not yet.
-* Bump module version to "10.0.1.0.0"
 * Replace `select = True` by `index = True`
 * Replace string selectors in XML by name (if possible) or other attribute selector or even another equivalent path/reference. For example, change `<group string="x" position="after">` by `<group name="x" position="after">`
 * Remove `<data>` and `</data>` in xml files if `noupdate="0"`
