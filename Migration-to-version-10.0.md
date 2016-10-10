@@ -11,7 +11,7 @@
 * Replace `openerp` imports to `odoo`. You can use this command:
 
   ```bash
-  find . -type f -name '*.py' | xargs sed -i 's/from openerp import/from odoo import/g'
+  find . -type f -name '*.py' | xargs sed -i 's/from openerp/from odoo/g'
   ```
 * Rename `__openerp__.py` to `__manifest__.py` if not yet renamed.
 * Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to the latest template.
