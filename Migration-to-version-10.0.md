@@ -29,20 +29,29 @@
 
 ## Technical method to migrate a module from "9.0" to "10.0" branch
 
-* `<repo>`: the OCA repository hosting the module
-* `<module>`: the name of the module you want to migrate
-* `<user/org>`: your Github login or organization name
+* `$REPO`: the OCA repository hosting the module
+* `$MODULE`: the name of the module you want to migrate
+* `$USER-ORG`: your GitHub login or organization name
 
 ```bash
-$ git clone https://github.com/OCA/<repo> -b 9.0 # optional if already existing
+$ git clone https://github.com/OCA/$REPO -b 9.0 # optional if already existing
 $ git remote update # optional if you have just cloned the repo
-$ git checkout -b 10.0-mig-<module> origin/10.0
-$ git format-patch --stdout origin/10.0..origin/9.0 -- <module> | git am -3
+$ git checkout -b 10.0-mig-$MODULE origin/10.0
+$ git format-patch --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3
+$ # Adapt the module to the 10.0 version and commit the changes
+$ ...
+$ git add --all
+$ git commit -m "[MIG] $MODULE: Migrated to 10.0"
+$ # optional if you already have your remote configured
+$ git remote add $USER-ORG git@github.com:$USER-ORG/$REPO.git # This mode requires an SSH key in the GitHub account
+$ git remote add https://github.com/$USER-ORG/$REPO.git # This will required to enter user/password each time
+$ # push the changes to GitHub and make the PR
+$ git push $USER-ORG 10.0-mig-$MODULE --set-upstream
 ```
 
 # Initialization (already done in OCA)
 
-Before migrating the first module, the following tasks must be performed:
+Before migrating the first module, the following tasks must be performed in the repository:
 
 * Create 10.0 branch from 9.0.
 * Update all modules manifest with installable = False.
