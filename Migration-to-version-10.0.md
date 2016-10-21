@@ -21,6 +21,7 @@
 * Replace `select = True` by `index = True`
 * Replace string selectors in XML by name (if possible) or other attribute selector or even another equivalent path/reference. For example, change `<group string="x" position="after">` by `<group name="x" position="after">`
 * Remove `<data>` and `</data>` in xml files if `noupdate="0"`
+* Replace the `<openerp>`/`</openerp>` tags in xml files by `<odoo>`/`</odoo>`.
 * Don't use `@api.one` with `@api.onchange` or it will crash.
 * `base.group_configuration` has been renamed to `base.group_system`.
 * (more coming in a couple of days...)
