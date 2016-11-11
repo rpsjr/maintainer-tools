@@ -24,7 +24,7 @@
 * Replace the `<openerp>`/`</openerp>` tags in xml files by `<odoo>`/`</odoo>`.
 * Don't use `@api.one` with `@api.onchange` or it will crash.
 * `base.group_configuration` has been renamed to `base.group_system`.
-* (more coming in a couple of days...)
+* Do the changes you need to do for making the module works on new version.
 
 # Howto
 
