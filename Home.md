@@ -6,6 +6,7 @@
 * [[Activate Transifex]]
 
 # Migration
+* [[Migration to version 10.0]]
 * [[Migration to version 9.0]]
 * [[Migration to version 8.0]]
 
