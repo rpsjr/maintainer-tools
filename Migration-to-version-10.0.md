@@ -24,6 +24,7 @@
 * Replace the `<openerp>`/`</openerp>` tags in xml files by `<odoo>`/`</odoo>`.
 * Don't use `@api.one` with `@api.onchange` or it will crash.
 * `base.group_configuration` has been renamed to `base.group_system`.
+* Change decorator of copy method `def copy(self):` from `@api.one` to `@api.multi`.
 * Do the changes you need to do for making the module works on new version.
 
 # Howto
