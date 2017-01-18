@@ -17,15 +17,6 @@ This produces:
 > pick 42bd9e8 Fix bug 2 of feature A
 > pick 7f767d5 Fix bug 3 of feature A
 
-> # Commands:
-> # p, pick = use commit
-> # r, reword = use commit, but edit the commit message
-> # e, edit = use commit, but stop for amending
-> # s, squash = use commit, but meld into previous commit
-> # f, fixup = like "squash", but discard this commit's log message
-> # x, exec = run command (the rest of the line) using shell
-> # d, drop = remove commit
-
 You want a single commit with one description only. Then change the lines to:
 > pick 1949129 Introduce feature A
 > fixup d2cf643 Fix bug 1 of feature A
