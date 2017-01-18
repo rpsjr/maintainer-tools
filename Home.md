@@ -4,6 +4,7 @@
 
 # Translation
 * [[Activate Transifex]]
+* [[Merge commits from Transifex]]
 
 # Migration
 * [[Migration to version 10.0]]
