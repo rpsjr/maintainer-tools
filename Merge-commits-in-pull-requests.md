@@ -13,9 +13,13 @@ Example:
 
 This produces:
 > pick 1949129 Introduce feature A
+
 > pick d2cf643 Fix bug 1 of feature A
+
 > pick 42bd9e8 Fix bug 2 of feature A
+
 > pick 7f767d5 Fix bug 3 of feature A
+
 
 You want a single commit with one description only. Then change the lines to:
 > pick 1949129 Introduce feature A
