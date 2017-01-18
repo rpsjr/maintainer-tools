@@ -1,10 +1,11 @@
 # How-to
 * [[Conventions]]
 * [[Create a new repository]]
+* [[Merge commits in pull requests]]
 
 # Translation
 * [[Activate Transifex]]
-* [[Merge commits from Transifex]]
+
 
 # Migration
 * [[Migration to version 10.0]]
