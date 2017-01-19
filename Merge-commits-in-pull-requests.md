@@ -23,6 +23,7 @@ This produces:
 You want a single commit with one description only. Then change the lines to:
 
 > pick 1949129 Introduce feature A
+
 > __fixup__ d2cf643 Fix bug 1 of feature A
 
 > __fixup__ 42bd9e8 Fix bug 2 of feature A
