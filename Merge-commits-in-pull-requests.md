@@ -2,7 +2,7 @@
 It is good practice that every time that you do a pull request, the commit history contains the minimum necessary commit messages.
 
 ## Merge/squash your own commits
- If you have worked locally on some feature, and produced a lot of commits in the process to reach to the final state, the rest of the world does not necessarily need to know your intermediate back and forth activity. You may just want to merge all these commits into a single one, and provide a nice summary of the changes that the changes introduce.
+ If you have worked locally on some feature, and produced a lot of commits in the process to reach to the final state, the rest of the world does not necessarily need to know your intermediate back and forth activity. You may just want to merge all these commits into a single one, and provide a nice summary of the changes that the commit introduces.
 
 In order to do squash your own commits you can use
 GIT_EDITOR=<editor> git rebase -i <first commit>
