@@ -38,7 +38,8 @@ This produces the following result:
 Suppose that you have commited your changes, and then in the future you introduce new features to your module. But in the meanwhile Transifex has produced several commits in the middle that make the commit history look dirty. You can merge all commits from Transifex together.
 
 In order to do squash the commits from Transifex for a particular module, use:
-GIT_EDITOR=<editor> git rebase -i origin/x, where x is the Odoo version (8, 9, 10,...)
+
+> GIT_EDITOR=<editor> git rebase -i origin/x, where x is the Odoo version (8, 9, 10,...)
 
 Example:
 You introduce commit:
