@@ -36,7 +36,7 @@
 * `$USER_ORG`: your GitHub login or organization name
 
 ```bash
-$ git clone https://github.com/OCA/$REPO -b 9.0 # optional if already existing
+$ git clone https://github.com/OCA/$REPO -b 10.0 # optional if already existing
 $ git remote update # optional if you have just cloned the repo
 $ git checkout -b 10.0-mig-$MODULE origin/10.0
 $ git format-patch --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3
