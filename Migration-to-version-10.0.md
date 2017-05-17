@@ -6,7 +6,8 @@
 
 # Tasks to do in the migration
 
-* Bump module version to "10.0.1.0.0"
+* Switch the `installable` key to `True`
+* Bump module version to `10.0.1.0.0`
 * Migrate code to new ORM API if not yet.
 * Replace `openerp` imports to `odoo`. You can use this command:
 
