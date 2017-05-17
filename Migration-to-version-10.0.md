@@ -44,7 +44,7 @@ $ git format-patch --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3
 $ # Adapt the module to the 10.0 version and commit the changes
 $ ...
 $ git add --all
-$ git commit -m "[MIG] $MODULE: Migrated to 10.0"
+$ git commit -m "[MIG] $MODULE: Migration to 10.0"
 $ # optional if you already have your remote configured
 $ git remote add $USER_ORG git@github.com:$USER_ORG/$REPO.git # This mode requires an SSH key in the GitHub account
 $ ... or ....
