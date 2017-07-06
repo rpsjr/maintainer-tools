@@ -40,7 +40,7 @@
 $ git clone https://github.com/OCA/$REPO -b 10.0 # optional if already existing
 $ git remote update # optional if you have just cloned the repo
 $ git checkout -b 10.0-mig-$MODULE origin/10.0
-$ git format-patch --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3
+$ git format-patch --keep-subject --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3 --keep
 $ # Adapt the module to the 10.0 version and commit the changes
 $ ...
 $ git add --all
