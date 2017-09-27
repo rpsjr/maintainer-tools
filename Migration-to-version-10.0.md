@@ -36,21 +36,29 @@
 * `$MODULE`: the name of the module you want to migrate
 * `$USER_ORG`: your GitHub login or organization name
 
+**Full process for beginners in Git flows**
+
 ```bash
-$ git clone https://github.com/OCA/$REPO -b 10.0 # optional if already existing
-$ git remote update # optional if you have just cloned the repo
+$ git clone https://github.com/OCA/$REPO -b 10.0
 $ git checkout -b 10.0-mig-$MODULE origin/10.0
 $ git format-patch --keep-subject --stdout origin/10.0..origin/9.0 -- $MODULE | git am -3 --keep
 $ # Adapt the module to the 10.0 version and commit the changes
 $ ...
 $ git add --all
 $ git commit -m "[MIG] $MODULE: Migration to 10.0"
-$ # optional if you already have your remote configured
 $ git remote add $USER_ORG git@github.com:$USER_ORG/$REPO.git # This mode requires an SSH key in the GitHub account
 $ ... or ....
 $ git remote add $USER_ORG https://github.com/$USER_ORG/$REPO.git # This will required to enter user/password each time
 $ # push the changes to GitHub and make the PR
 $ git push $USER_ORG 10.0-mig-$MODULE --set-upstream
+```
+
+**Short method for advanced users that know the rest of the Git flow**
+
+```bash
+$ git remote update # In case the repo was already cloned before
+$ git checkout -b 9.0-mig-<module> origin/9.0
+$ git format-patch --stdout origin/9.0..origin/8.0 -- <module path> | git am -3
 ```
 
 # Initialization (already done in OCA)
