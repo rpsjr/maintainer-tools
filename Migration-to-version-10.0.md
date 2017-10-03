@@ -58,7 +58,7 @@ $ git push $USER_ORG 10.0-mig-$MODULE --set-upstream
 ```bash
 $ git remote update # In case the repo was already cloned before
 $ git checkout -b 10.0-mig-<module> origin/10.0
-$ git format-patch --stdout origin/10.0..origin/9.0 -- <module path> | git am -3
+$ git format-patch --keep-subject --stdout origin/10.0..origin/9.0 -- <module path> | git am -3 --keep
 ```
 
 # Initialization (already done in OCA)
