@@ -15,6 +15,9 @@
 ```bash
 2to3 -wnj4 --no-diffs .
 ```
+
+  
+  You can also check Python 3 compatibility and conversions guide by Odoo: https://github.com/odoo/odoo/blob/11.0/doc/python3.rst
 * Remove the use of workflows (they have dissapeared in this version).
 * All area configs have been merged on a general `res.config.settings` model, so you have to adapt your possible settings in your module.
 
