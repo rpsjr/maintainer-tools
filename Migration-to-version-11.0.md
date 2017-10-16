@@ -16,8 +16,11 @@
   2to3 -wnj4 --no-diffs .
   ```
   You can also check Python 3 compatibility and conversions guide by Odoo: https://github.com/odoo/odoo/blob/11.0/doc/python3.rst
-* Remove the use of workflows (they have dissapeared in this version).
+* Remove the use of workflows (they have dissappeared in this version).
 * All area configs have been merged on a general `res.config.settings` model, so you have to adapt your possible settings in your module.
+* For v10 `ir.values` entries:
+  * if they are for showing an option under "Print" or "Actions" dropdown menu, remove the record and just add a field `binding_model_id` on the ir.actions.act_window linked record.
+  * if they are for having default values, use instead the model `ir.default`.
 
 # Howto
 
