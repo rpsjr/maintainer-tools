@@ -8,9 +8,6 @@
 
 * Bump module version to `11.0.1.0.0`
 * Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to the latest template.
-* Add tests to increase code coverage.
-* Update code to remove use of deprecated methods.
-* Do the changes you need to do for making the module works on new version.
 * Convert Python 3 incompatible code. You can automate some things using 2to3 utility (bundled in most Linux distributions) with this command being on the module directory (it can require a later manual review for optimizing some sentences):
   ```bash
   2to3 -wnj4 --no-diffs .
@@ -30,6 +27,8 @@
     * `report.html_container` > `web.html_container`.
     * `report.layout` > `web.report_layout`.
     * `report.minimal_layout` > `web.minimal_layout`.
+* Add tests to increase code coverage.
+* Do the rest of the changes you need to do for making the module works on new version.
 
 
 # Howto
