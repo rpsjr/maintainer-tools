@@ -21,6 +21,16 @@
 * For v10 `ir.values` entries:
   * if they are for showing an option under "Print" or "Actions" dropdown menu, remove the record and just add a field `binding_model_id` on the ir.actions.act_window linked record. Add `binding_type` = `report` if the ir.values had `key2` = `client_print_multi`.
   * if they are for having default values, use instead the model `ir.default`.
+* If you use reports, `report` module has been split between `base` and `web`:
+  * Change all references of `ir.actions.report.xml` by `ir.actions.report`, as the model has been changed. 
+  * Replace t-call occurrences of base report templates:
+    * `report.external_layout` > `web.external_layout`.
+    * `report.external_layout_header`: No direct equivalent. You need to insert inside `div class="header o_clean_header">` the elements of the `web.external_layout_?` view, being `?` one of the available "themes" (`background`, `boxed`, `clean` and `standard` in core)
+    * `report.external_layout_header`: the same as above, but looking inside `<div class="footer o_background_footer">` element.
+    * `report.html_container` > `web.html_container`.
+    * `report.layout` > `web.report_layout`.
+    * `report.minimal_layout` > `web.minimal_layout`.
+
 
 # Howto
 
