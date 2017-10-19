@@ -19,7 +19,7 @@
 * Remove the use of workflows (they have dissappeared in this version).
 * All area configs have been merged on a general `res.config.settings` model, so you have to adapt your possible settings in your module.
 * For v10 `ir.values` entries:
-  * if they are for showing an option under "Print" or "Actions" dropdown menu, remove the record and just add a field `binding_model_id` on the ir.actions.act_window linked record.
+  * if they are for showing an option under "Print" or "Actions" dropdown menu, remove the record and just add a field `binding_model_id` on the ir.actions.act_window linked record. Add `binding_type` = `report` if the ir.values had `key2` = `client_print_multi`.
   * if they are for having default values, use instead the model `ir.default`.
 
 # Howto
