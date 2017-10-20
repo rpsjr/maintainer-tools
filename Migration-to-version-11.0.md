@@ -7,13 +7,14 @@
 # Tasks to do in the migration
 
 * Bump module version to `11.0.1.0.0`
+* The first line `# -*- coding: utf-8 -*-` [is not needed anymore in Python 3](https://stackoverflow.com/questions/37048761/coding-utf-8-on-python3/37048998#37048998) if you save it in that encoding.
 * Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to the latest template.
 * Convert Python 3 incompatible code. You can automate some things using 2to3 utility (bundled in most Linux distributions) with this command being on the module directory (it can require a later manual review for optimizing some sentences):
   ```bash
   2to3 -wnj4 --no-diffs .
   ```
   You can also check Python 3 compatibility and conversions guide by Odoo: https://github.com/odoo/odoo/blob/11.0/doc/python3.rst
-* Remove the use of workflows (they have dissappeared in this version).
+* Remove the use of workflows (they have disappeared in this version).
 * All area configs have been merged on a general `res.config.settings` model, so you have to adapt your possible settings in your module.
 * For v10 `ir.values` entries:
   * if they are for showing an option under "Print" or "Actions" dropdown menu, remove the record and just add a field `binding_model_id` on the ir.actions.act_window linked record. Add `binding_type` = `report` if the ir.values had `key2` = `client_print_multi`.
