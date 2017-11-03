@@ -7,6 +7,7 @@
 # Todo
 
 * Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst
+* Remove any possible migration script from previous version.
 * Add tests to increase code coverage
 * Update code to remove use of deprecated methods
 * Update code to take advantage of the new features
