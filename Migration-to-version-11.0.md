@@ -7,7 +7,7 @@
 # Tasks to do in the migration
 
 * Bump module version to `11.0.1.0.0`
-* The first line `# -*- coding: utf-8 -*-` [is not needed anymore in Python 3](https://stackoverflow.com/questions/37048761/coding-utf-8-on-python3/37048998#37048998) if you save it in that encoding.
+* The first line `# -*- coding: utf-8 -*-` [is not needed anymore in Python 3](https://stackoverflow.com/questions/37048761/coding-utf-8-on-python3/37048998#37048998) if you save it in that encoding. (You can use the following command to auto-delete it: `find . -name "*.py" -exec sed -i '' "/#.*coding\: /d" {} \;`)
 * Update README.rst from https://raw.githubusercontent.com/OCA/maintainer-tools/master/template/module/README.rst if not updated to the latest template.
 * Convert Python 3 incompatible code. You can automate some things using 2to3 utility (bundled in most Linux distributions) with this command being on the module directory (it can require a later manual review for optimizing some sentences):
   ```bash
