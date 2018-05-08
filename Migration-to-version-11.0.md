@@ -31,7 +31,10 @@
     * `report.minimal_layout` > `web.minimal_layout`.
 * Remove `group_ids` field in `ir.config_parameter` records, and read/write them with `sudo()` instead (https://github.com/odoo/odoo/commit/d0ca2d115e8b40308e1ff83bf9e7cc874762fbff).
 * If using widget `kanban_state_selection` in any view, change it to just `state_selection`.
-* Add tests to increase code coverage.
+* If you create `ir.cron` in module setup you have to change:
+    * `model` (string) -> `model_id` (m2o to model)
+    * `function` (string) + `args` (string) -> `code` (eg: model.cron_that_does_something())
+    * Add tests to increase code coverage.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
