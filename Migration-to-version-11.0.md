@@ -25,7 +25,7 @@
   * Replace t-call occurrences of base report templates:
     * `report.external_layout` > `web.external_layout`.
     * `report.external_layout_header`: No direct equivalent. You need to insert the changes inside `div class="header o_clean_header">` element of the `web.external_layout_?` view, being `?` one of the available "themes" (`background`, `boxed`, `clean` and `standard` in core)
-    * `report.external_layout_header`: the same as above, but looking inside `<div class="footer o_background_footer">` element.
+    * `report.external_layout_footer`: the same as above, but looking inside `<div class="footer o_background_footer">` element.
     * `report.html_container` > `web.html_container`.
     * `report.layout` > `web.report_layout`.
     * `report.minimal_layout` > `web.minimal_layout`.
