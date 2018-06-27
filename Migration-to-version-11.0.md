@@ -74,6 +74,20 @@ $ git checkout -b 11.0-mig-<module> origin/11.0
 $ git format-patch --keep-subject --stdout origin/11.0..origin/10.0 -- <module path> | git am -3 --keep
 ```
 
+**Troubleshooting**
+
+Sometimes, when performing these operations, the process can hang due to conflicts on the patches being applied. One of the possible problems is because a patch removes entirely a file and `git am` is not able to resolve this. It ends with a message `error: ...: patch does not apply`.
+
+If that's your case, you can add `--ignore-whitespace` at the end of the `git am` command for allowing the patch to be applied, although there will be still conflicts to be solved, but they will be doable through standard conflict resolution system. Starting from the previous situation, you will need to do:
+
+```bash
+git am --abort
+git format-patch --keep-subject --stdout origin/11.0..origin/10.0 -- <module path> | git am -3 --keep --ignore-whitespace
+# resolve conflicts (for example git rm <file>)
+git add --all
+git am --continue
+```
+
 # Initialization (already done in OCA)
 
 Before migrating the first module, the following tasks must be performed in the repository:
