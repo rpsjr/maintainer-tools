@@ -7,7 +7,7 @@
 # Tasks to do in the migration
 
 * Bump module version to `12.0.1.0.0`
-* Use new README by fragment system, copying https://github.com/OCA/maintainer-tools/tree/master/template/module/readme and editing or removing the needed sections. You can then run locally `oca-gen-addon-readme` if you have OCA/maintainer-tools if you want to pregenerate the README.rst file (preferred), or keep previous README.rst file.
+* Use new README by fragment system, copying https://github.com/OCA/maintainer-tools/tree/master/template/module/readme and editing or removing the needed sections. You can then run locally `oca-gen-addon-readme` if you have OCA/maintainer-tools installed and you want to pregenerate the README.rst file (preferred), or keep previous README.rst file.
 * Remove any possible migration script from previous version.
 * Add tests to increase code coverage.
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` and `fields.Date/Datetime.to_string` is needed.
