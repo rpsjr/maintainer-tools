@@ -11,6 +11,7 @@
 * Remove any possible migration script from previous version.
 * Add tests to increase code coverage.
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` and `fields.Date/Datetime.to_string` is needed.
+* All `<label>` elements in views must have a `for=""` attribute.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
