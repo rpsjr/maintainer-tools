@@ -12,6 +12,7 @@
 * Add tests to increase code coverage.
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` is needed. For converting old style date/datetime strings to Python object, use `fields.Date.to_date` and `fields.Datetime.to_datetime` methods. 
 * All `<label>` elements in views must have a `for=""` attribute.
+* Convert your SASS styles to SCSS.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
