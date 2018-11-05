@@ -1,6 +1,6 @@
 # Before migrating
 
-* Update yourself with the latest OCA Conventions: https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+* Update yourself with the latest OCA Conventions: https://odoo-community.org/page/contributing
 * Subscribe to the mailing list of the related project: https://odoo-community.org/groups
 * Announce on the corresponding GitHub issue with the name "Migration to version 12.0" which module(s) you want to migrate
 
