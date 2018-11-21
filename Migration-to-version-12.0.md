@@ -15,6 +15,11 @@
 * All `<filter>` elements in search views must have a `name` attribute.
 * Convert your SASS styles to SCSS.
 * Related fields are now read only by default. If your code relies on the default contrary, you should add `readonly=False` in your field definition.
+* base module has reorganized all the model files to include everything inside `models` folder. If you import that files, you should change import path. You can automate most of these changes with these bash commands:
+  ```
+  find . -type f -name '*.py' | xargs sed -i 's/from odoo.addons.base.res/from odoo.addons.base.models/g'
+  find . -type f -name '*.py' | xargs sed -i 's/from http://odoo.addons.base.ir/from  odoo.addons.base.models/g'
+  ```
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
