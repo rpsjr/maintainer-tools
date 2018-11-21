@@ -8,6 +8,7 @@
 
 
 # Migration
+* [[Migration to version 12.0]]
 * [[Migration to version 11.0]]
 * [[Migration to version 10.0]]
 * [[Migration to version 9.0]]
