@@ -14,6 +14,7 @@
 * All `<label>` elements in views must have a `for=""` attribute.
 * All `<filter>` elements in search views must have a `name` attribute.
 * Convert your SASS styles to SCSS.
+* Related fields are now read only by default. If your code relies on the default contrary, you should add `readonly=False` in your field definition.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
