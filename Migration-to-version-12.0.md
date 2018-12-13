@@ -13,6 +13,7 @@
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` is needed. For converting old style date/datetime strings to Python object, use `fields.Date.to_date` and `fields.Datetime.to_datetime` methods. 
 * All `<label>` elements in views must have a `for=""` attribute.
 * All `<filter>` elements in search views must have a `name` attribute.
+* All `<button>` elements in a tree view should have `string` attribute for accessibility.
 * Convert your SASS styles to SCSS.
 * Related fields are now read only by default. If your code relies on the default contrary, you should add `readonly=False` in your field definition.
 * base module has reorganized all the model files to include everything inside `models` folder. If you import that files, you should change import path. You can automate most of these changes with these bash commands:
