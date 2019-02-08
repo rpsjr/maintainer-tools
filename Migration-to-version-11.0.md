@@ -34,6 +34,7 @@
 * If you create `ir.cron` in module setup you have to change:
     * `model` (string) -> `model_id` (m2o to model)
     * `function` (string) + `args` (string) -> `code` (eg: model.cron_that_does_something())
+* `colors` attribute in `<tree>` tag has been replaced by `decoration-*` (warning, info, danger...) attributes  (bootstrap codes) with the condition as value for each.
 * Add tests to increase code coverage.
 * Do the rest of the changes you need to do for making the module works on new version.
 
