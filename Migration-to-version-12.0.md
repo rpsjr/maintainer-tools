@@ -11,6 +11,7 @@
 * Remove any possible migration script from previous version.
 * Add tests to increase code coverage.
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` is needed. For converting old style date/datetime strings to Python object, use `fields.Date.to_date` and `fields.Datetime.to_datetime` methods. 
+* If you overwrite `create` method (in a new model or in an inherited one), look if you can apply decorator `@api.model_create_multi` for batch mode creation. See https://www.odoo.com/es_ES/slides/slide/let-s-create-records-faster-602 for more details.
 * All `<label>` elements in views must have a `for=""` attribute.
 * All `<filter>` elements in search views must have a `name` attribute.
 * All `<button>` elements in a tree view should have a `string` attribute for accessibility.
