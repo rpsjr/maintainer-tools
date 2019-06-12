@@ -27,6 +27,12 @@
 * Don't use `@api.one` with `@api.onchange` or it will crash.
 * `base.group_configuration` has been renamed to `base.group_system`.
 * Change decorator of copy method `def copy(self):` from `@api.one` to `@api.multi`.
+* These security groups have changed its module from `base` to `sales_team`:
+
+  * `base.group_sale_salesman` > `sales_team.group_sale_salesman`.
+  * `base.group_sale_salesman_all_leads` > `sales_team.group_sale_salesman_all_leads`.
+  * `base.group_sale_manager` > `sales_team.group_sale_manager`.
+
 * Do the changes you need to do for making the module works on new version.
 
 # Howto
