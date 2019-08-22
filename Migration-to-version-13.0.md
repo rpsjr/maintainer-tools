@@ -9,6 +9,7 @@
 * Bump module version to `13.0.1.0.0`.
 * Remove any possible migration script from previous version.
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*.
+* Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v12. It's also recommended to check for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
