@@ -10,7 +10,7 @@
 * Remove any possible migration script from previous version.
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*.
 * Remove all the decorators `@api.multi`, `@api.returns`, `@api.one` from the code, as now they are all multi-record by default. In case of the last one, you will need to adapt the code to the behavior change.
-* Check that all "compute" methods of computed fields assign a value in any case to the field, even if it is a "False". (https://github.com/odoo/odoo/pull/36743/commits/2e43bfc1c4b2f61e0459614f61f90a77dc3b7233)
+* Check that all "compute" methods of non-stored computed fields assign a value in any case to the field, even if it is a "False". (https://github.com/odoo/odoo/pull/36743/commits/2e43bfc1c4b2f61e0459614f61f90a77dc3b7233). Stored fields can keep the previous value.
 * Replace sudo(user): "deprecated use of sudo(user), use with_user(user) instead"
 * Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
 * Remove all the `oldname` field attributes in the code. If they were added in previous version, they have served their function any way, and now in this version it's not supported, so if you have the need, create a migration script and use openupgradelib's `rename_fields` method.
