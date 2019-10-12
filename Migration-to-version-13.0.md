@@ -15,6 +15,7 @@
 * Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
 * Remove all the `oldname` field attributes in the code. If they were added in previous version, they have served their function any way, and now in this version it's not supported, so if you have the need, create a migration script and use openupgradelib's `rename_fields` method.
 * Remove `view_type` tag on action window XML definition. It's now always `form` (tree is not supported since 11.0 any way).
+* In the manifest, rename python dependencies to use the PyPI distribution name instead of the import name (see https://github.com/odoo/odoo/pull/25549 for more information)
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v12. It's also recommended to check for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
