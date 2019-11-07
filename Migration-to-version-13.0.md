@@ -18,6 +18,7 @@
 * Remove `multi` field from `ir.actions.act_window` models. Now you have `binding_view_types` field for indicating in which view the action will be available: `list`, `form` or empty for both. If declaring the action through the accelerator tag `<act_window>`, then use the attribute `binding_views`. More reference in https://github.com/odoo/odoo/pull/24738/commits/33d51480688065e367eb646f12b89d721749cac9.
 * If using any decimal precision in float fields (example: `import odoo.addons.decimal_precision as dp; x = fields.Float(digits=dp.get_precision("Account"))`), now the qualifier is put directly without the need of importing anything and simplifying syntax: `x = fields.Float(digits="Account")`.
 * In the manifest, rename python dependencies to use the PyPI distribution name instead of the import name (see https://github.com/odoo/odoo/pull/25549 for more information)
+* If the module is touching Accounting part, see https://github.com/OCA/maintainer-tools/issues/430 for the structural changes detected in it.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v12. It's also recommended to check for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
