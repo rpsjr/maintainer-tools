@@ -24,6 +24,7 @@
   find . -type f -name '*.py' | xargs sed -i 's/from http://odoo.addons.base.ir/from  odoo.addons.base.models/g'
   ```
 * If you need to generate a PDF in tests, you have to pass the context key `force_report_rendering=True` for getting that instead of an HTML, as now the method `qweb_render_pdf` defaults to `qweb_render_html` on test environment.
+* On website modules, `website_published` field, that comes from `website.published.mixin`, turns to computed non stored, and the stored value is now `is_published`. You will need migration scripts for renaming the field.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 
