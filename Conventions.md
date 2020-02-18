@@ -1,1 +1,1 @@
-Moved to https://github.com/OCA/maintainer-tools/blob/master/CONTRIBUTING.md
+Moved to https://odoo-community.org/page/contributing
