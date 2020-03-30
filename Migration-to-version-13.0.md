@@ -49,7 +49,7 @@ grep -nri 'oldname\|sudo([^\)]\+)\|api.multi\|api.returns\|api.one\|api.cr\|api.
   $ git format-patch --keep-subject --stdout origin/13.0..origin/12.0 -- $MODULE | git am -3 --keep
   $ pre-commit run -a  # to run black, isort and prettier (ignore pylint errors at this stage)
   $ git add -u
-  $ git commit -m "[IMP] $MODULE: black, isort, prettier"  --no-verify  # it is important to do all Black formatting in one commit the first time
+  $ git commit -m "[IMP] $MODULE: black, isort, prettier"  --no-verify  # it is important to do all formatting in one commit the first time
   ```
 * Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests for a procedure for reducing commits from "OCA Transbot...".
 * Adapt the module to the 13.0 version following tasks to do.
@@ -71,7 +71,7 @@ $ git checkout -b 13.0-mig-<module> origin/13.0
 $ git format-patch --keep-subject --stdout origin/13.0..origin/12.0 -- <module path> | git am -3 --keep
 $ pre-commit run -a  # to runs black, isort and prettier (ignore pylint errors at this stage)
 $ git add -u
-$ git commit -m "[IMP] $MODULE: black, isort, prettier" --no-verify  # it is important to do all Black formatting in one commit the first time
+$ git commit -m "[IMP] $MODULE: black, isort, prettier" --no-verify  # it is important to do all formatting in one commit the first time
 ```
 
 **Troubleshooting**
