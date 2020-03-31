@@ -10,7 +10,7 @@
 * Remove any possible migration script from previous version.
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*.
 * Remove all the decorators `@api.multi`, `@api.returns`, `@api.one`, `@api.cr`, `@api.model_cr` from the code. Now they are all multi-record by default. In case of the last ones, you will need to adapt the code to the behavior change. 
-* Check that all "compute" methods of non-stored computed fields assign a value in any case to the field, even if it is a falsy one. (https://github.com/odoo/odoo/pull/36743/commits/2e43bfc1c4b2f61e0459614f61f90a77dc3b7233).
+* Check that all "compute" methods of non-stored computed fields assign a value in any case to the field, even if it is a falsy one.
 * Computed stored fields will keep their previous value if not assigned during the compute method, so don't rely on any expected default value.
 * Replace sudo(user): "deprecated use of sudo(user), use with_user(user) instead"
 * Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
