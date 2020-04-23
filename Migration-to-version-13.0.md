@@ -22,7 +22,8 @@
 * If having an smart-button for `active` field, with widget `toggle_button`, the archive/unarchive actions are available without doing anything more, so you can remove it. And the new paradigm is to put instead a ribbon when archived with the code `<widget name="web_ribbon" text="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>`.
 * If using any decimal precision in float fields (example: `import odoo.addons.decimal_precision as dp; x = fields.Float(digits=dp.get_precision("Account"))`), now the qualifier is put directly without the need of importing anything and simplifying syntax: `x = fields.Float(digits="Account")`.
 * In the manifest, rename python dependencies to use the PyPI distribution name instead of the import name (see https://github.com/odoo/odoo/pull/25549 for more information)
-* In Javascript, replace jQuery promises (`$`) by native `Promise` (example: `$.when()` becomes `Promise.resolve()`.
+* In JavaScript, replace jQuery promises (`$`) by native `Promise` (example: `$.when()` becomes `Promise.resolve()`.
+* In JavaScript, replace `config.debug` sentence for getting if in debug mode by `config.isDebug()`.
 * If the module is touching Accounting part, see https://github.com/OCA/maintainer-tools/issues/430 for the structural changes detected in it.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v12. It's also recommended to check for things not done in previous migrations.
