@@ -11,7 +11,7 @@
 * Remove any possible migration script from previous version.
 * Add tests to increase code coverage.
 * If you handle dates and datetimes, you might need to adapt your code now that Odoo returns always native Python objects, so no more `fields.Date/Datetime.from_string` is needed. For converting old style date/datetime strings to Python object, use `fields.Date.to_date` and `fields.Datetime.to_datetime` methods. 
-* If you overwrite `create` method (in a new model or in an inherited one), look if you can apply decorator `@api.model_create_multi` for batch mode creation. See https://www.odoo.com/es_ES/slides/slide/let-s-create-records-faster-602 for more details.
+* If you overwrite `create` method (in a new model or in an inherited one), look if you can apply decorator `@api.model_create_multi` for batch mode creation. See https://www.youtube.com/watch?v=KhDg-t0F_T8 for more details.
 * If your model uses `_parent_store = True`, then you should remove `parent_left` and `parent_right` fields, and add a new one `parent_path = fields.Char(index=True)`. For providing full support when migrating, a post-migration script should be done calling `env['model_name']._parent_store_compute()` for filling this new field.
 * All `<label>` elements in views must have a `for=""` attribute.
 * All `<filter>` elements in search views must have a `name` attribute.
