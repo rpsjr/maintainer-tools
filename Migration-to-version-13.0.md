@@ -8,7 +8,7 @@
 
 * Bump module version to `13.0.1.0.0`.
 * Remove any possible migration script from previous version.
-* Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*.
+* Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*. **IMPORTANT**: Don't squash legit translation commits, authored by their translators, with the message "Translated using Weblate (...)".
 * Remove all the decorators `@api.multi`, `@api.returns`, `@api.one`, `@api.cr`, `@api.model_cr` from the code. Now they are all multi-record by default. In case of the last ones, you will need to adapt the code to the behavior change. 
 * Check that all "compute" methods of non-stored computed fields assign a value in any case to the field, even if it is a falsy one.
 * Computed stored fields will keep their previous value if not assigned during the compute method, so don't rely on any expected default value.
