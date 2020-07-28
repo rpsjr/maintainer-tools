@@ -14,7 +14,7 @@
 * Computed stored fields will keep their previous value if not assigned during the compute method, so don't rely on any expected default value.
 * Multi-company record rules now need to have this general form: `['|',('company_id','=',False),('company_id','in',company_ids)]</field>`, and you need to add migration script as well when being noupdate="1" record (which should be the majority). See https://github.com/OCA/credit-control/pull/54/commits/162cde23fe5c0dd12f7de1fa01d36a0bc156008e for an example.
 * For the rest of multi-company considerations, see https://www.odoo.com/documentation/13.0/howtos/company.html.
-* Replace sudo(user): "deprecated use of sudo(user), use with_user(user) instead"
+* Replace `sudo(user)` (but keep `sudo()`). Use `with_user(user)` instead.
 * Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
 * Remove all the `oldname` field attributes in the code. If they were added in previous version, they have served their function any way, and now in this version it's not supported, so if you have the need, create a migration script and use openupgradelib's `rename_fields` method.
 * Remove `view_type` tag on action window XML definition. It's now always `form` (`tree` is not supported since 11.0 any way).
