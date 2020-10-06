@@ -12,6 +12,7 @@
 * If you add new values in a selection field through `selection_add`, you have to define a new `ondelete=` attribute setting the value to assign for each previous value in case of uninstallation. More info at https://github.com/odoo/odoo/commit/f0481392c6501cae2c38359f526da1eefa451337. Example: `selection_field = fields.Selection(selection_add="foo", ondelete={"foo": "set null"})`.
 * Some XML modifiers in views disappear: `invisible` and `readonly`. They should be assigned through general modifier `attrs`.
 * XML shortcut tags `<act_window>` and `<report>` are no longer valid, and must be replaced by its full definition through `<record>` tag.
+* If there are transient models, you have to add explicit security ACLs for them (and optionally record rules).
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v13. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
