@@ -13,6 +13,7 @@
 * In View XML, the `invisible` and `readonly` no longer support dynamic expressions. In those, use the `attrs` attribute instead.
 * XML shortcut tags `<act_window>` and `<report>` are no longer valid, and must be replaced by its full definition through `<record>` tag.
 * If there are transient models, you have to add explicit security ACLs for them (and optionally record rules).
+* If you were overriding `_compute_display_name` for getting a different `display_name`, you should now override `name_get` method and add there the needed `@api.depends`.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v13. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
