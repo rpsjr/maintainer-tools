@@ -16,7 +16,6 @@
 * For the rest of multi-company considerations, see https://www.odoo.com/documentation/13.0/howtos/company.html.
 * Replace `sudo(user)` (but keep `sudo()`). Use `with_user(user)` instead.
 * Change `track_visibility="..."` field attribute by `tracking=True`.
-* Some of the Font Awesome (FA) icons have changed their name as now Odoo uses FA v5, so you might need to change them in your module views. Check the changed names in https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4#name-changes.
 * Remove all the `oldname` field attributes in the code. If they were added in previous version, they have served their function any way, and now in this version it's not supported, so if you have the need, create a migration script and use openupgradelib's `rename_fields` method.
 * Remove `view_type` tag on action window XML definition. It's now always `form` (`tree` is not supported since 11.0 any way).
 * Remove `multi` field from `ir.actions.act_window` models. Now you have `binding_view_types` field for indicating in which view the action will be available: `list`, `form` or empty for both. If declaring the action through the accelerator tag `<act_window>`, then use the attribute `binding_views`. More reference in https://github.com/odoo/odoo/pull/24738/commits/33d51480688065e367eb646f12b89d721749cac9.
