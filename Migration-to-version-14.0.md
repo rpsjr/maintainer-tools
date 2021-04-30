@@ -16,6 +16,7 @@
 * If you were overriding `_compute_display_name` for getting a different `display_name`, you should now override `name_get` method and add there the needed `@api.depends`. This is not valid though if you want to make `display_name` stored for allowing a direct `name_search`. Other option is to override `name_search` instead.
 * Add tests to increase code coverage.
 * Remove `size=X` attribute in `Char` fields, as it's no longer valid for restricting the size of the strings.
+* `_name_search` is now returning ids instead of the `name_get` style tuple (list of `(id, display_name)`): https://github.com/odoo/odoo/commit/1f48130d2bd055835ee428a21922331d126285a3
 * Check tasks of previous versions if you are migrating from lower versions than v13. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
 
