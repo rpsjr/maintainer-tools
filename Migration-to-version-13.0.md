@@ -29,6 +29,7 @@
 * If using any decimal precision in float fields (example: `import odoo.addons.decimal_precision as dp; x = fields.Float(digits=dp.get_precision("Account"))`), now the qualifier is put directly without the need of importing anything and simplifying syntax: `x = fields.Float(digits="Account")`.
 * In the manifest, rename python dependencies to use the PyPI distribution name instead of the import name (see https://github.com/odoo/odoo/pull/25549 for more information)
 * If you have `.env.user.company_id`, you need to change it to `.env.company` if the intended use is to get "current active company".
+* If inheriting `hr.employee` use `hr.employee.base` instead. See  https://github.com/OCA/hr/pull/1001
 * In JavaScript, replace jQuery promises (`$`) by native `Promise` (example: `$.when()` becomes `Promise.resolve()`).
 * In JavaScript, replace `config.debug` sentence for getting if in debug mode by `config.isDebug()`.
 * If the module is touching Accounting part, see https://github.com/OCA/maintainer-tools/issues/430 for the structural changes detected in it.
