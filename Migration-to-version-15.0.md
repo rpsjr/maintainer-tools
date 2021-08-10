@@ -2,14 +2,14 @@
 
 * Update yourself with the latest OCA Conventions: https://odoo-community.org/page/contributing
 * Subscribe to the mailing list of the related project: https://odoo-community.org/groups
-* Announce on the corresponding GitHub issue with the name "Migration to version 14.0" which module(s) you want to migrate
+* Announce on the corresponding GitHub issue with the name "Migration to version 15.0" which module(s) you want to migrate
 
 # Tasks to do in the migration
 
 * Bump module version to `15.0.1.0.0`.
 * Remove any possible migration script from previous version.
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*. **IMPORTANT**: Don't squash legit translation commits, authored by their translators, with the message "Translated using Weblate (...)".
-* If you add new values in a selection field through `selection_add`, you have to define a new `ondelete=` attribute setting the value to assign for each previous value in case of uninstallation. More info at https://github.com/odoo/odoo/commit/f0481392c6501cae2c38359f526da1eefa451337. Example: `selection_field = fields.Selection(selection_add=[("foo", "Foo")], ondelete={"foo": "set null"})`.
+* `t-raw` QWeb directives are replaced by `t-out` ones, with the optional Python tool `markupsafe.Markup` for escaping HTML content in server side. HTML fields apply directly the markup when used on QWeb. See https://github.com/odoo/odoo/commit/01875541b1a8131cb for more details.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v14. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
