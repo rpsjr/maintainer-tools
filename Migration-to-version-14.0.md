@@ -19,6 +19,7 @@
 * Replace appearances of `.with_context(force_company=...)` with `.with_company(...)`.
 * The access to `ir.actions.*` objects has been removed, so you need to use `sudo` or interact via the /web/action/load controller.
 See odoo/odoo#53335 for more information.
+* If you are posting messages in the chatter with a subtype, now the name of the subtype is shown on the UI, so you don't need to repeat such text on the body, and also take this into account for putting good subtypes names (from the functional perspective).
 * Check tasks of previous versions if you are migrating from lower versions than v13. It's also recommended to check past migration guides for things not done in previous migrations.
 * Add tests to increase code coverage.
 * Do the rest of the changes you need to do for making the module works on new version.
