@@ -11,6 +11,7 @@
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*. **IMPORTANT**: Don't squash legit translation commits, authored by their translators, with the message "Translated using Weblate (...)".
 * `t-raw` QWeb directives are replaced by `t-out` ones, with the optional Python tool `markupsafe.Markup` for escaping HTML content in server side. HTML fields apply directly the markup when used on QWeb. See https://github.com/odoo/odoo/commit/01875541b1a8131cb for more details.
 * The access to ir.model* objects has been removed, so you need to use `sudo`, or use the existing methods for getting usual data. See https://github.com/odoo/odoo/pull/69120 for more info.
+* Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v14. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
