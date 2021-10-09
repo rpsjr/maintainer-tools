@@ -13,7 +13,7 @@
 * The access to ir.model* objects has been removed, so you need to use `sudo`, or use the existing methods for getting usual data. See https://github.com/odoo/odoo/pull/69120 for more info.
 * Jinja syntax in mail templates has been replaced by 2 languages:
   * *Qweb* for the body of the mail template.
-  * *inline_template*, which is similar as Jinja, but with expressions enclosed by `{{` and `}}` instead of `${` and `}`. It's used in fields like subject, email_from, email_to, etc.
+  * *inline_template*, which is similar to Jinja, but with expressions enclosed by `{{` and `}}` instead of `${` and `}`. It's used in fields like subject, email_from, email_to, etc.
 
   More info and examples of replacing at https://github.com/odoo/odoo/pull/77074
 * Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
