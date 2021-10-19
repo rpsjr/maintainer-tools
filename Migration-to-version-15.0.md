@@ -17,6 +17,7 @@
 
   More info and examples of replacing at https://github.com/odoo/odoo/pull/77074
 * Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
+* If you write a hook or any code that requires to create a new environment, there's no need of using the `with Environment.manage():` context statement anymore.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v14. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
