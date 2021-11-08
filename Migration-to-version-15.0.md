@@ -16,6 +16,7 @@
   * *inline_template*, which is similar to Jinja, but with expressions enclosed by `{{` and `}}` instead of `${` and `}`. It's used in fields like subject, email_from, email_to, etc.
 
   More info and examples of replacing at https://github.com/odoo/odoo/pull/77074
+* If you migrate some .js file to an ES module (they start with `/** @odoo-module **/`), rename the file to finish with `.esm.js` (rename also the assets) to enable ESLint compatibility.
 * Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
 * If you write a hook or any code that requires to create a new environment, there's no need of using the `with Environment.manage():` context statement anymore.
 * Add tests to increase code coverage.
