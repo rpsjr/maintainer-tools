@@ -17,6 +17,23 @@
 
   More info and examples of replacing at https://github.com/odoo/odoo/pull/77074
 * If you migrate some .js file to an ES module (they start with `/** @odoo-module **/`), rename the file to finish with `.esm.js` (rename also the assets) to enable ESLint compatibility.
+* Assets are now directly declared in the manifest. You should move .js and .scss links from templates to `__manifest__.py` file. They should be placed under "assets" key with the following structure:
+
+  ```
+  "assets": {
+     "web.assets_backend": ["path to .js or css, like /module_name/static/src/...",...],
+     "web.assets_qweb": ["path to .xml, like /module_name/static/src/...",...],
+     "...": [...],
+  },
+  ```
+
+  Notice that there is no more "qweb" key in `__manifest__.py`. Instead of it, you must link all qweb .xml in `web.assets_qweb` bundle, as shown above.
+
+  The path to the files is now relative to the root folder, not the module folder.
+
+  Illustrative example: https://github.com/OCA/credit-control/pull/154/commits/c2349c52dc5385f46c94bfa8fc0db2381b251fc8
+
+  You can use [globs](https://en.wikipedia.org/wiki/Glob_(programming)) as well for not having to declare each individual file.
 * Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
 * If you write a hook or any code that requires to create a new environment, there's no need of using the `with Environment.manage():` context statement anymore.
 * Add tests to increase code coverage.
