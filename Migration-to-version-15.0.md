@@ -54,7 +54,7 @@
   ```bash
   $ git clone https://github.com/OCA/$REPO -b 15.0
   $ git checkout -b 15.0-mig-$MODULE origin/15.0
-  $ git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep
+  $ git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep --directory $MODULE
   $ pre-commit run -a  # to run black, isort and prettier (ignore pylint errors at this stage)
   $ git add -A
   $ git commit -m "[IMP] $MODULE: black, isort, prettier"  --no-verify  # it is important to do all formatting in one commit the first time
