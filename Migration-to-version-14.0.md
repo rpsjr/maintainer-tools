@@ -16,6 +16,7 @@
 * If you were overriding `_compute_display_name` for getting a different `display_name`, you should now override `name_get` method and add there the needed `@api.depends`. This is not valid though if you want to make `display_name` stored for allowing a direct `name_search`. Other option is to override `name_search` instead.
 * Remove `size=X` attribute in `Char` fields, as it's no longer valid for restricting the size of the strings.
 * `_name_search` is now returning ids instead of the `name_get` style tuple (list of `(id, display_name)`): https://github.com/odoo/odoo/commit/1f48130d2bd055835ee428a21922331d126285a3
+* Remove `global` field assignation line in record rules, as it's a computed field.
 * Replace appearances of `.with_context(force_company=...)` with `.with_company(...)`.
 * The access to `ir.actions.*` objects has been removed, so you need to use `sudo` or interact via the /web/action/load controller.
 See odoo/odoo#53335 for more information.
