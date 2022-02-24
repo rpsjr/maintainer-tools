@@ -53,6 +53,7 @@
 * On a shell command:
   ```bash
   $ git clone https://github.com/OCA/$REPO -b 15.0
+  $ cd $REPO
   $ git checkout -b 15.0-mig-$MODULE origin/15.0
   $ git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep
   $ pre-commit run -a  # to run black, isort and prettier (ignore pylint errors at this stage)
