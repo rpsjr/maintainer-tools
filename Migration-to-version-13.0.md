@@ -30,7 +30,7 @@
 * In the manifest, rename python dependencies to use the PyPI distribution name instead of the import name (see https://github.com/odoo/odoo/pull/25549 for more information)
 * If you have `.env.user.company_id`, you need to change it to `.env.company` if the intended use is to get "current active company".
 * If inheriting `hr.employee` use `hr.employee.base` instead. See https://github.com/OCA/hr/pull/1001 and https://github.com/odoo/odoo/commit/c9ca3761464413327d2beb697553a3ccd7eef4d1
-* On mail templates, you can't use `format_tz` anymore. Instead, use `format_datetime` with explicit tz and date format arguments. Example: `format_tz(object.date)` becomes `${format_datetime(object.date, tz=object.tz, dt_format="dd/MM/yyyy HH:mm")}`
+* On mail templates, you can't use `format_tz` anymore. Instead, use `format_datetime` with explicit tz and date format arguments. Example: `format_tz(object.date)` becomes `format_datetime(object.date, tz=object.tz, dt_format="dd/MM/yyyy HH:mm")`
 * In JavaScript, replace jQuery promises (`$`) by native `Promise` (example: `$.when()` becomes `Promise.resolve()`).
 * In JavaScript, replace `config.debug` sentence for getting if in debug mode by `config.isDebug()`.
 * If the module is touching Accounting part, see https://github.com/OCA/maintainer-tools/issues/430 for the structural changes detected in it.
