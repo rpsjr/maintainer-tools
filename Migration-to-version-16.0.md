@@ -2,7 +2,7 @@
 
 * Update yourself with the latest OCA Conventions: https://odoo-community.org/page/contributing
 * Subscribe to the mailing list of the related project: https://odoo-community.org/groups
-* Announce on the corresponding GitHub issue with the name "Migration to version 16.0" which module(s) you want to migrate
+* On the corresponding GitHub issue named "Migration to version 16.0", announce which module(s) you want to migrate
 
 # Tasks to do in the migration
 
