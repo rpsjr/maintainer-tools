@@ -25,7 +25,7 @@ See odoo/odoo#53335 for more information.
 * Add tests to increase code coverage.
 * Do the rest of the changes you need to do for making the module works on new version.
 
-# Howto
+# How-to
 
 ## Technical method to migrate a module from "13.0" to "14.0" branch
 
