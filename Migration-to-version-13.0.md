@@ -44,7 +44,7 @@ Regex which can help to find the things to remove/change:
 grep -nri 'oldname\|sudo([^\)]\+)\|api.multi\|api.returns\|api.one\|api.cr\|api.model_cr\|12.0\|compute=' $MODULE
 ```
 
-# Howto
+# How-to
 
 ## Technical method to migrate a module from "12.0" to "13.0" branch
 
