@@ -14,7 +14,7 @@
 * Check tasks of previous versions if you are migrating from lower versions than v15. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
 
-# Howto
+# How-to
 
 ## Technical method to migrate a module from "15.0" to "16.0" branch
 
