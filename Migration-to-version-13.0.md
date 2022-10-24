@@ -3,6 +3,7 @@
 * Update yourself with the latest OCA Conventions: https://odoo-community.org/page/contributing
 * Subscribe to the mailing list of the related project: https://odoo-community.org/groups
 * On the corresponding GitHub issue named "Migration to version 13.0", announce which module(s) you want to migrate
+* [[Install pre-commit]]
 
 # Tasks to do in the migration
 
