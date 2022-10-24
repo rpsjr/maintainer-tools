@@ -2,10 +2,10 @@
 * [[Conventions]]
 * [[Create a new repository]]
 * [[Merge commits in pull requests]]
+* [[Install pre-commit]]
 
 # Translation
 * [How to translate](https://odoo-community.org/page/translate)
-
 
 # Migration
 * [[Migration to version 15.0]]
