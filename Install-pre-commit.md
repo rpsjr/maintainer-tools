@@ -27,3 +27,7 @@ But for isolating dependencies, it's better to use another package installer cal
 ```
 pipx install pre-commit
 ```
+
+# Repository preparation
+
+It's good to have pre-commit stuff auto-launched when running `git commit`. To get that, you can type on each repository `pre-commit install -f`. New cloned and creates repositories will have it by default.
