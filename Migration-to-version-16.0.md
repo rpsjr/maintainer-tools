@@ -17,6 +17,7 @@
 * The methods `flush()` and `recompute()` are deprecated. Use `flush_model()`, `flush_recordset()` or `env.flush_all()` instead depending on the needed granularity.
 * The methods `refresh()` and `invalidate_cache()` are deprecated. Use `invalidate_model()`, `invalidate_recordset()` or `env.invalidate_all()` instead depending on the needed granularity.
 * You can now use more type of indexes in fields depending on the purpose. Check them on https://github.com/odoo/odoo/blob/fa8fc5b26b948a9da4013874fb5af2d84ddb98c6/odoo/fields.py#L125-L133. `True` value can be replaced by `btree` to be more expressive.
+* XML assets templates are now added into regular asset bundles. Previously, they were added to the fake asset bundle `web.assets_qweb`, but now, they should be declared in their proper assets bundle that fits their scope (`web.assets_backend`, `web.assets_frontend`, etc). You can check plenty of examples in the original refactor: odoo/odoo#95500.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v15. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
