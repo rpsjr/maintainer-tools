@@ -3,6 +3,7 @@
 * [[Create a new repository]]
 * [[Merge commits in pull requests]]
 * [[Install pre-commit]]
+* [[Use temporary reference(s) to another pull request(s)]]
 
 # Translation
 * [How to translate](https://odoo-community.org/page/translate)
