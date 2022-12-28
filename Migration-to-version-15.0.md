@@ -74,6 +74,7 @@
   $ git push $USER_ORG 15.0-mig-$MODULE --set-upstream
   ```
 * Follow the link on the command line or check in https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork how to create the pull request.
+* For being easily searchable and to avoid to duplicate efforts, please name the pull request following this pattern: `[15.0][MIG] <module>: Migration to 15.0`.
 
 **Troubleshooting**
 
