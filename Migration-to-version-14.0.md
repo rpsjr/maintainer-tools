@@ -9,7 +9,7 @@
 
 * Bump module version to `14.0.1.0.0`.
 * Remove any possible migration script from previous version.
-* Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*. **IMPORTANT**: Don't squash legit translation commits, authored by their translators, with the message "Translated using Weblate (...)".
+* Squash administrative commits (if any) with the previous commit for reducing commit noise. Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests#mergesquash-the-commits-generated-by-bots-or-weblate for details. 
 * If you add new values in a selection field through `selection_add`, you have to define a new `ondelete=` attribute setting the value to assign for each previous value in case of uninstallation. More info at https://github.com/odoo/odoo/commit/f0481392c6501cae2c38359f526da1eefa451337. Example: `selection_field = fields.Selection(selection_add=[("foo", "Foo")], ondelete={"foo": "set null"})`.
 * In the XML views, the `invisible` and `readonly` attributes no longer support dynamic expressions like `state=='draft'`. When using those, use the `attrs` attribute instead. You can only use them for direct context queries like `context.get('invisible')`.
 * XML shortcut tags `<act_window>` and `<report>` are no longer valid, and must be replaced by its full definition through `<record>` tag.
