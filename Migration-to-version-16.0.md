@@ -9,7 +9,7 @@
 
 * Bump module version to `16.0.1.0.0`.
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
-* Squash administrative commits (if any) with the previous commit for reducing commit noise. They are named as "[UPD] README.rst", "[UPD] Update $MODULE.pot", "Update translation files" and similar names, and comes from *OCA-git-bot*, *oca-travis* or *oca-transbot*. **IMPORTANT**: Don't squash legit translation commits, authored by their translators, with the message "Translated using Weblate (...)".
+* Squash administrative commits (if any) with the previous commit for reducing commit noise. Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests#mergesquash-the-commits-generated-by-bots-or-weblate for details.
 * If you are overriding `name_search` method in your module, you may make use now of new `_rec_names_search` class variable to expose the fields to search for without requiring the method override. More details at https://github.com/odoo/odoo/commit/3155c3e425581b71491844e7f9a3dd76a9f245a4.
 * Any view with `groups_id` on it now has to move such groups to the elements of the view. But now you can put `groups` attribute in a view field instead of isolating it on a view without fear of an access error. Check both things in https://github.com/odoo/odoo/pull/98551 and https://github.com/odoo/odoo/pull/95729.
 * If using `fields_get_keys()` method for getting fields definition, now use directly `_fields` variable or `get_views()` method.
