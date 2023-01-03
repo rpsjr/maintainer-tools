@@ -6,10 +6,10 @@ For that, you need to create (it not exists yet) or edit the file `test-requirem
 
 On it, you can add a line for each pull request with this format:
 
-**For <=v13:**
+**For <=v14:**
 
 ```
-odoo<series>-addon-<module_name_with_dashes> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+odoo<series>-addon-<module_name> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
 
 Example:
@@ -18,10 +18,10 @@ Example:
 odoo13-addon-survey_sale_generation @ git+https://github.com/OCA/survey.git@refs/pull/65/head#subdirectory=setup/survey_sale_generation
 ```
 
-**For >=v14:**
+**For >=v15:**
 
 ```
-odoo-addon--<module_name_with_dashes> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
 
 Example:
