@@ -6,8 +6,22 @@ For that, you need to create (it not exists yet) or edit the file `test-requirem
 
 On it, you can add a line for each pull request with this format:
 
+**For <=v13:**
+
 ```
-odoo-addon-<module_name_with_dashes> @ git+https://github.com/OCA/<repository>/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+odoo<series>-addon-<module_name_with_dashes> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+```
+
+Example:
+
+```
+odoo13-addon-survey_sale_generation @ git+https://github.com/OCA/survey.git@refs/pull/65/head#subdirectory=setup/survey_sale_generation
+```
+
+**For >=v14:**
+
+```
+odoo-addon--<module_name_with_dashes> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
 
 Example:
@@ -19,7 +33,7 @@ odoo-addon-product-packaging-level @ git+https://github.com/OCA/product-attribut
 Please put such changes on a separate commit with a commit message similar to this one:
 
 ```
-[DONT MERGE] test-requirements.txt
+[DON'T MERGE] test-requirements.txt
 ```
 
 so that you will be able to simply remove such commit when the pull request is merged. There's a linter in the CI for avoiding to merge pull requests that contain such temporary references.
