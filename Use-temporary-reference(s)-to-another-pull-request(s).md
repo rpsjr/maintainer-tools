@@ -27,7 +27,7 @@ odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git/refs/pull
 Example:
 
 ```
-odoo-addon-product-packaging-level @ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=setup/product_packaging_level
+odoo-addon-product_packaging_level @ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=setup/product_packaging_level
 ```
 
 Please put such changes on a separate commit with a commit message similar to this one:
