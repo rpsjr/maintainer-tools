@@ -9,7 +9,7 @@ On it, you can add a line for each pull request with this format:
 **For <=v14:**
 
 ```
-odoo<series>-addon-<module_name> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+odoo<series>-addon-<module_name> @ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
 
 Example:
@@ -21,7 +21,7 @@ odoo13-addon-survey_sale_generation @ git+https://github.com/OCA/survey.git@refs
 **For >=v15:**
 
 ```
-odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git/refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
 
 Example:
