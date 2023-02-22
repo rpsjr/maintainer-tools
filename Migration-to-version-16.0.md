@@ -20,8 +20,22 @@
 * XML assets templates are now added into regular asset bundles. Previously, they were added to the fake asset bundle `web.assets_qweb`, but now, they should be declared in their proper assets bundle that fits their scope (`web.assets_backend`, `web.assets_frontend`, etc). You can check plenty of examples in the original refactor: [odoo/odoo#95500](https://github.com/odoo/odoo/pull/95500).
 * Put `unaccent=False` on field definitions where no distinction should be made between accented words, for getting better performance on searches. Example: `parent_path` field. See https://github.com/odoo/odoo/pull/76436 for more details.
 * Add tests to increase code coverage.
+* If there's a test class using `setUp` to generate test records, move it to `setUpClass` as it's way more performant since it runs only once.
 * Check tasks of previous versions if you are migrating from lower versions than v15. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
+
+# Tasks NOT to do in the migration
+
+* change copyright year
+
+A line like this:
+
+```
+# Copyright 2017 ACME Ltd - Johnny Glamour
+```
+says "copyright FROM 2017". There's no need to change the year to the current year.
+
+* change original authors
 
 # How-to
 
