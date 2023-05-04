@@ -38,6 +38,7 @@
   You can use [globs](https://en.wikipedia.org/wiki/Glob_(programming)) as well for not having to declare each individual file.
 * Replace `SavepointCase` by `TransactionCase` in tests, as they are now the same. The old one still exists as an alias, but a warning will arise, and next version will remove such alias. More info at https://github.com/odoo/odoo/pull/62031
 * If you write a hook or any code that requires to create a new environment, there's no need of using the `with Environment.manage():` context statement anymore.
+* If you want to prevent the deletion of some records according a criteria, instead of overriding the unlink method, use a method with the decorator `@api.ondelete`. Put `at_uninstall=True` only if the check should be also performed on module uninstallation. Example: https://github.com/odoo/odoo/blob/74e76bfb9bce3c4caf80a69af3359677b6b40cf3/addons/account/models/account_account.py#L554-L557
 * Add tests to increase code coverage.
 * If there's a test class using `setUp` to generate test records, move it to `setUpClass` as it's way more performant since it runs only once.
 * Check tasks of previous versions if you are migrating from lower versions than v14. It's also recommended to check past migration guides for things not done in previous migrations.
