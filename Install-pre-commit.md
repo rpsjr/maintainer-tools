@@ -31,3 +31,11 @@ pipx install pre-commit
 # Repository preparation
 
 It's good to have pre-commit stuff auto-launched when running `git commit`. To get that, you can type on each repository `pre-commit install -f`. New cloned and created repositories will have it by default.
+
+# Manual run
+
+You can run pre-commit anytime launching this command inside the repository folder:
+
+```
+pre-commit run -a
+```
