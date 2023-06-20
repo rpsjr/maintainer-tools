@@ -30,4 +30,4 @@ pipx install pre-commit
 
 # Repository preparation
 
-It's good to have pre-commit stuff auto-launched when running `git commit`. To get that, you can type on each repository `pre-commit install -f`. New cloned and creates repositories will have it by default.
+It's good to have pre-commit stuff auto-launched when running `git commit`. To get that, you can type on each repository `pre-commit install -f`. New cloned and created repositories will have it by default.
