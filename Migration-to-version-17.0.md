@@ -11,6 +11,7 @@
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests#mergesquash-the-commits-generated-by-bots-or-weblate for details.
 * If you are overriding `name_get` method, you should now override `_compute_display_name` instead, adding the possible new fields in the `depends` of the method. See https://github.com/odoo/odoo/pull/122085 for more details.
+* Replace the usage of `get_resource_path` by `file_path` with the new argument syntax. Some examples in https://github.com/odoo/odoo/pull/135607
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v16. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
