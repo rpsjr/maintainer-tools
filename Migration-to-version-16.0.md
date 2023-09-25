@@ -9,7 +9,7 @@
 
 **REMARK:** Here, we are highlighting framework changes from previous version to this one, not data-model changes, as they are very extensive, and the alternative may depends on the module requirements. You can check data-model changes for each core module in the `upgrade_analysis.txt` files inside OpenUpgrade project: https://github.com/OCA/OpenUpgrade.
 
-**REMARK 2**: If you are doing a migration jumping several versions, please check all the tasks in the successive migration to version XX.0 issues.
+**REMARK 2**: If you are doing a migration jumping several versions, please check all the tasks in the successive "Migration to version XX.0" guides until arriving to this one.
 
 * Bump module version to `16.0.1.0.0`.
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
@@ -26,7 +26,9 @@
 * Put `unaccent=False` on field definitions where no distinction should be made between accented words, for getting better performance on searches. Example: `parent_path` field. See https://github.com/odoo/odoo/pull/76436 for more details.
 * Add tests to increase code coverage.
 * If there's a test class using `setUp` to generate test records, move it to `setUpClass` as it's way more performant since it runs only once.
-* Check tasks of previous versions if you are migrating from lower versions than v15. It's also recommended to check past migration guides for things not done in previous migrations.
+* If there's a method calling super in the module, check that the method is still there on upstream dependencies and it's not dead code.
+* If there's a method overriding, check that the signature and keywords are maintained in this version, or adapt it conveniently.
+* Check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to do for making the module works on new version.
 
 # Tasks NOT to do in the migration
