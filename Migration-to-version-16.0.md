@@ -2,10 +2,14 @@
 
 * Update yourself with the latest OCA Conventions: https://odoo-community.org/page/contributing
 * Subscribe to the mailing list of the related project: https://odoo-community.org/groups
-* On the corresponding GitHub issue named "Migration to version 16.0", announce which module(s) you want to migrate
+* On the corresponding GitHub issue inside the repository named "Migration to version 16.0", announce which module(s) you want to migrate
 * [[Install pre-commit]]
 
 # Tasks to do in the migration
+
+**REMARK:** Here, we are highlighting framework changes from previous version to this one, not data-model changes, as they are very extensive, and the alternative may depends on the module requirements. You can check data-model changes for each core module in the `upgrade_analysis.txt` files inside OpenUpgrade project: https://github.com/OCA/OpenUpgrade.
+
+**REMARK 2**: If you are doing a migration jumping several versions, please check all the tasks in the successive migration to version XX.0 issues.
 
 * Bump module version to `16.0.1.0.0`.
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
