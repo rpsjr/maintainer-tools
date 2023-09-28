@@ -10,6 +10,7 @@
 * Bump module version to `15.0.1.0.0`.
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests#mergesquash-the-commits-generated-by-bots-or-weblate for details.
+* Check if the [maturity level](https://github.com/OCA/odoo-community.org/blob/master/website/Contribution/oca_module_lifecycle_development_status.rst) of the module can be improved in this version.
 * `t-raw` QWeb directives are replaced by `t-out` ones, with the optional Python tool `markupsafe.Markup` for escaping HTML content in server side. HTML fields apply directly the markup when used on QWeb. See https://github.com/odoo/odoo/commit/01875541b1a8131cb, https://github.com/odoo/odoo/pull/70004 and https://github.com/odoo/odoo/pull/70004 for more details.
 - `t-esc` directives are also deprecated, but they still works as an alias of `t-out`. When possible, switch to this new name in advance of the future directive removal.
 * The access to ir.model* objects has been removed, so you need to use `sudo`, or use the existing methods for getting usual data. See https://github.com/odoo/odoo/pull/69120 for more info.
