@@ -38,4 +38,14 @@ Please put such changes on a separate commit with a commit message similar to th
 
 so that you will be able to simply remove such commit when the pull request is merged. There's a linter in the CI for avoiding to merge pull requests that contain such temporary references.
 
-*NOTE*: This is only valid for branches with the PIP install mode, which should be most of the 13.0 ones, and all of the 14.0+.
+**NOTE**: This is only valid for branches with the PIP install mode, which should be most of the 13.0 ones, and all of the 14.0+.
+
+**NOTE 2**: It's convenient to mention on the pull request that it depends on the other one with this format:
+
+```
+Depends on:
+
+- [ ] <url_of_the_dependent_pr>
+```
+
+This way, GitHub references both of them, and track if the dependent one is merged.
