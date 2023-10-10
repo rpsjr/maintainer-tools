@@ -7,7 +7,7 @@
 
 # Tasks to do in the migration
 
-**REMARK:** Here, we are highlighting framework changes from previous version to this one, not data-model changes, as they are very extensive, and the alternative may depends on the module requirements. You can check data-model changes for each core module in the `upgrade_analysis.txt` files inside OpenUpgrade project: https://github.com/OCA/OpenUpgrade.
+**REMARK:** Here, we are highlighting **framework changes** from previous version to this one, not data-model changes, as they are very extensive, and the alternative may depends on the module requirements. You can check data-model changes for each core module in the `upgrade_analysis.txt` files inside OpenUpgrade project: https://github.com/OCA/OpenUpgrade.
 
 **REMARK 2**: If you are doing a migration jumping several versions, please check all the tasks in the successive "Migration to version XX.0" guides until arriving to this one.
 
@@ -18,7 +18,7 @@
 * If you are overriding `name_search` method in your module, you may make use now of new `_rec_names_search` class variable to expose the fields to search for without requiring the method override. More details at https://github.com/odoo/odoo/commit/3155c3e425581b71491844e7f9a3dd76a9f245a4.
 * Any view with `groups_id` on it now has to move such groups to the elements of the view. But now you can put `groups` attribute in a view field instead of isolating it on a view without fear of an access error. Check it in https://github.com/odoo/odoo/pull/98551.
 * On the same mood, you should check if the fields protected by a group interact in some way with business logic or UI. For example, a field being part of a domain of another field, or being used in copy/defaults. An special case is the field `company_id`, which is always used internally for domains on many2one fields referencing multi-company aware records. On these cases, you have to add the same field twice, one with the group, and another invisible without it. Check core examples in https://github.com/odoo/odoo/pull/95729.
-* Pne2many fields outside of a notebook are now not expanding to the full form width by default. You should put `colspan="2"` for achieving such effect. Example: https://github.com/OCA/bank-payment/commit/e95d794aef37ab25239efd7a2e75793b39f81928#diff-7fb1d0b06e216bc7b8ebd1553323de7cd5cda01c9199ad4bd707007cbfb92251R59
+* One2many fields outside of a notebook are now not expanding to the full form width by default. You should put `colspan="2"` for achieving such effect. Example: https://github.com/OCA/bank-payment/commit/e95d794aef37ab25239efd7a2e75793b39f81928#diff-7fb1d0b06e216bc7b8ebd1553323de7cd5cda01c9199ad4bd707007cbfb92251R59
 * If using `fields_get_keys()` method for getting fields definition, now use directly `_fields` variable or `get_views()` method.
 * If using `get_xml_id()` method for getting an ID, now use the method `get_external_id()`.
 * The methods `flush()` and `recompute()` are deprecated. Use `flush_model()`, `flush_recordset()` or `env.flush_all()` instead depending on the needed granularity.
