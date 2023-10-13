@@ -36,7 +36,9 @@ Please put such changes on a separate commit with a commit message similar to th
 [DON'T MERGE] test-requirements.txt
 ```
 
-so that you will be able to simply remove such commit when the pull request is merged. There's a linter in the CI for avoiding to merge pull requests that contain such temporary references.
+so that you will be able to simply remove such commit when the pull request is merged.
+
+**WARNING**: There's a linter in the CI for avoiding to merge pull requests that contain such temporary references, so you will have a temporary ❌ on the checks, but the rest of them will use the referenced PR and should be green (except codecov ones, that are allowed to fail, but recommended to be improved).
 
 **NOTE**: This is only valid for branches with the PIP install mode, which should be most of the 13.0 ones, and all of the 14.0+.
 
