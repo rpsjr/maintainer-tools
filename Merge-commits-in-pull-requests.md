@@ -45,7 +45,8 @@ Example:
 2a0f1de (OCA-git-bot) [UPD] README.rst
 21fede3 (oca-travis) [UPD] Update module.pot
 83526e8 (oca-transbot) Update translation files
-00d0e95 (translator1) Translated using Weblate (Italian)
+00d0e95 (translator1) Added translation using Weblate (Italian)
+e34ab12 (translator1) Translated using Weblate (Italian)
 b112d0c (contributor2) [FIX] module_x: Fix README explanation
 a437b38 (OCA-git-bot) [UPD] README.rst
 19891ab (translator1) Translated using Weblate (Italian)
@@ -66,7 +67,8 @@ pick 4c88180 (contributor1) [ADD] module_x
 f 2a0f1de (OCA-git-bot) [UPD] README.rst
 f 21fede3 (oca-travis) [UPD] Update module.pot
 f 83526e8 (oca-transbot) Update translation files
-pick 00d0e95 (translator1) Translated using Weblate (Italian)
+pick 00d0e95 (translator1) Added translation using Weblate (Italian)
+f e34ab12 (translator1) Translated using Weblate (Italian)
 f 19891ab (translator1) Translated using Weblate (Italian)
 pick b112d0c (contributor2) [FIX] module_x: Fix README explanation
 f a437b38 (OCA-git-bot) [UPD] README.rst
@@ -77,11 +79,12 @@ f 8f90d6c (oca-travis) [UPD] Update module.pot
 ```
 
 - We have squashed all the bot commits with the "real" commit that generates them.
+- We merge together translation commits for the same language coming from the same author. It's OK to merge the commit saying "Added translation using Weblate..." with commits saying "Translated using Weblate...", as both are translations. It's just that Weblate put a different commit message if the translation is new, or if it already exists.
 - We have changed the order of the second `Translated using Weblate (Italian)`, as they come from the same translator and it's the same language, to squash them together.
 - We don't squash translation commits coming from different translators.
 - We don't squash translation commits from the same contributor, but different language.
 
-There's a chance that changing the order of lines, a merge conflict appears. That's because some of the files touched by the commit, are modified on the in-between commits. On that case, you can't squash that commits together and they should be left as is. Abort the operation with `git rebase --abort` and start again.
+There's a chance that changing the order of lines, a merge conflict appears. That's because some of the files touched by the commit, are modified on the in-between commits. On that case, you can't squash that commits together and they should be left as is. Abort the operation with `git rebase --abort` and start again without reordering such commits.
 
 That's why it's recommended to do 2 rebase passes: one with only the fixups that don't modify commit order, and a second one with them, and if any error, iterate the pass only squashing one by one until discovering the conflicting one.
 
