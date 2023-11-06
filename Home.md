@@ -9,6 +9,7 @@
 * [How to translate](https://odoo-community.org/page/translate)
 
 # Migration
+* [[Migration to version 17.0]]
 * [[Migration to version 16.0]]
 * [[Migration to version 15.0]]
 * [[Migration to version 14.0]]
