@@ -18,7 +18,7 @@ Example:
 odoo13-addon-survey_sale_generation @ git+https://github.com/OCA/survey.git@refs/pull/65/head#subdirectory=setup/survey_sale_generation
 ```
 
-**For >=v15:**
+**For v15 and v16:**
 
 Starting with Odoo 15, we use python versions that have the modern pip resolver, so we don't need to encode the Odoo series in the addon name anymore:
 
