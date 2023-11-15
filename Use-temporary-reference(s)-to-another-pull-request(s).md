@@ -20,6 +20,8 @@ odoo13-addon-survey_sale_generation @ git+https://github.com/OCA/survey.git@refs
 
 **For >=v15:**
 
+Starting with Odoo 15, we use python versions that have the modern pip resolver, so we don't need to encode the Odoo series in the addon name anymore:
+
 ```
 odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
 ```
@@ -28,6 +30,20 @@ Example:
 
 ```
 odoo-addon-product_packaging_level @ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=setup/product_packaging_level
+```
+
+**For >=v17:**
+
+Starting from Odoo 17, the python project is not in the `setup/` directory but each addon is a little python project in itself (it has a pyproject.toml in it), so the subdirectory fragment is the addon name.
+
+```
+odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=<module_name>
+```
+
+Example:
+
+```
+odoo-addon-product_packaging_level @ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=product_packaging_level
 ```
 
 Please put such changes on a separate commit with a commit message similar to this one:
