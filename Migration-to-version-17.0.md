@@ -20,6 +20,7 @@
 
   A warning will be issued if not replaced. Check the framework change and replacement examples at https://github.com/odoo/odoo/commit/daf05d48ac76d500aa1285184bdddc4c67641d58.
 * The XML attributes `attrs` and `states` are no longer used, and should be replaced by their equivalent Python expression under `invisible`, `required` and/or `readonly` attributes. Example: `attrs="{'invisible': [('name', '=', 'red')]}` is converted to `invisible="name == 'red'"`. Full explanation and more examples at https://github.com/odoo/odoo/pull/104741.
+* On a tree view, if you have a field with `invisible="1"`, you should change it `column_invisible="1"`, or now the column will be shown, but empty.
 * Remove `owl="1"` from OWL templates, as it's not needed anymore as all of them are OWL now. Reference: https://github.com/odoo/odoo/pull/130467. Application of this removal in Odoo core: https://github.com/odoo/odoo/pull/141383.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v16. It's also recommended to check past migration guides for things not done in previous migrations.
