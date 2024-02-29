@@ -34,6 +34,26 @@
   * The `<div class="o_setting_box *" ...>` is now `<setting ...>`.
   * The divs with classes `o_setting_right_pane` or `o_setting_left_pane` are no more needed and should be removed.
   * The fields, labels, paragraphs are put inside `<setting>` tag.
+* Odoo now blocks by default external calls through `requests` library in the tests. Consider mocking them, or introduce this code in your test:
+
+  * Add this import:
+
+    ```python
+    import requests
+    ```
+  * On `setUpClass`, before calling super:
+
+    ```python
+    cls._super_send = requests.Session.send
+    ```
+  * Add this method:
+
+    ```python
+    @classmethod
+    def _request_handler(cls, s, r, /, **kw):
+        """Don't block external requests."""
+        return cls._super_send(s, r, **kw)
+    ```
 * Remove `owl="1"` from OWL templates, as it's not needed anymore as all of them are OWL now. Reference: https://github.com/odoo/odoo/pull/130467. Application of this removal in Odoo core: https://github.com/odoo/odoo/pull/141383.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than v16. It's also recommended to check past migration guides for things not done in previous migrations.
