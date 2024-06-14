@@ -92,7 +92,7 @@
   $ pre-commit run -a  # to run pre-commit linters and formatters (please ignore pylint errors at this stage)
   $ rm *.deb
   $ git add -A
-  $ git commit -m "[IMP] $module: pre-commit auto fixes"  --no-verify  # it is important to do all formatting in one commit the first time
+  $ git commit -m "[IMP] $module: pre-commit auto fixes"  --no-verify  # it is important to do all the formatting in one commit the first time
   ```
 * Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests for a procedure for reducing commits from "OCA Transbot...".
 * Adapt the module to the 17.0 version following tasks to do.
