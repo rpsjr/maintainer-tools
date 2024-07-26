@@ -4,10 +4,9 @@
 
 Some of the hooks we have configured in OCA repositories:
 
-- black and autoflake formatting tools
-- flake8, pylint, pylint-odoo and pre-commit checks
+- ruff formatting and checking tool (flake8, black, autoflake and isort for older versions)
+- pylint, pylint-odoo and pre-commit checks
 - setuptools-odoo folder creation
-- isort
 - prettier for XML
 - eslint for JS
 - ...
