@@ -38,3 +38,5 @@ You can run pre-commit anytime launching this command inside the repository fold
 ```
 pre-commit run -a
 ```
+
+Take into account that this tool returns error when some auto-formatting is done or the auxiliary files (like README) are regenerated. The next pass will be correct, as those changes have already been done.
