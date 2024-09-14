@@ -14,6 +14,15 @@
 * Bump module version to `18.0.1.0.0`.
 * Remove any possible migration script from previous version (in a nutshell, remove `migrations` folder inside the module if exists).
 * Squash administrative commits (if any) with the previous commit for reducing commit noise. Check https://github.com/OCA/maintainer-tools/wiki/Merge-commits-in-pull-requests#mergesquash-the-commits-generated-by-bots-or-weblate for details.
+* Replace `tree` view type by `list`. This means everywhere in Python, JS or XML where there's a mentioning of this type.
+
+  There's a script that automates most of the work provided by Odoo itself. To use it, have a local minimal Odoo installation, and run:
+
+  ```shell
+  <path_to_odoo>/odoo-bin upgrade_code --addons-path <path_to_module>
+  ```
+
+  See this global change with examples in the Odoo PR: https://github.com/odoo/odoo/pull/159909.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than 17. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to perform for making the module works on the new version.
