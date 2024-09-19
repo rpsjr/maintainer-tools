@@ -23,6 +23,7 @@
   ```
 
   See this global change with examples in the Odoo PR: https://github.com/odoo/odoo/pull/159909.
+* `user_has_groups` has been removed, so now you should use `self.env.user.has_group`. More details and examples of the replacement in https://github.com/odoo/odoo/pull/151597.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than 17. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to perform for making the module works on the new version.
