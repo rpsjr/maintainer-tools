@@ -26,7 +26,7 @@
 * `user_has_groups` has been removed, so now you should use `self.env.user.has_group`. More details and examples of the replacement in https://github.com/odoo/odoo/pull/151597.
 * Methods `check_access_rights()` and `check_access_rule()` are replaced by a single method `check_access()`, the same as `_filter_access_rule()` and `_filter_access_rule_python()` by `_filter_access()`. More info at https://github.com/odoo/odoo/pull/179148.
 * `_name_search` is gone, replaced by `_search_display_name`
-* be careful with searches on non stored related fields: they don't log a warning anymore, they throw an exception
+* Be careful with searches on non stored related fields: they don't log a warning anymore, they throw an exception.
 * Add tests to increase code coverage.
 * Check tasks of previous versions if you are migrating from lower versions than 17. It's also recommended to check past migration guides for things not done in previous migrations.
 * Do the rest of the changes you need to perform for making the module works on the new version.
