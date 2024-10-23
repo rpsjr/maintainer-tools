@@ -25,7 +25,8 @@
   See this global change with examples in the Odoo PR: https://github.com/odoo/odoo/pull/159909.
 * `user_has_groups` has been removed, so now you should use `self.env.user.has_group`. More details and examples of the replacement in https://github.com/odoo/odoo/pull/151597.
 * Methods `check_access_rights()` and `check_access_rule()` are replaced by a single method `check_access()`, the same as `_filter_access_rule()` and `_filter_access_rule_python()` by `_filter_access()`. More info at https://github.com/odoo/odoo/pull/179148.
-* `_name_search` is gone, replaced by `_search_display_name`
+* `_name_search` is gone, replaced by `_search_display_name`.
+* Replace the deprecated `_check_recursion()` method by `_has_cycle()`.
 * Be careful with searches on non stored related fields: they don't log a warning anymore, they throw an exception.
 * The `<div class="oe_chatter">` with all its inner stuff now converts into just `<chatter />`. See https://github.com/odoo/odoo/pull/156463 for more details and sample replacements.
 * Add tests to increase code coverage.
