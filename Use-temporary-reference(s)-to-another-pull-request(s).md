@@ -23,13 +23,13 @@ On it, you can add a line for each pull request with this format:
   Starting with Odoo 15, we use python versions that have the modern pip resolver, so we don't need to encode the Odoo series in the addon name anymore:
 
   ```
-  odoo-addon-<module_name> @ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
+  odoo-addon-<module_name>@ git+https://github.com/OCA/<repository>.git@refs/pull/<PR_number>/head#subdirectory=setup/<module_name>
   ```
 
   Example:
 
   ```
-  odoo-addon-product_packaging_level @ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=setup/product_packaging_level
+  odoo-addon-product_packaging_level@ git+https://github.com/OCA/product-attribute.git@refs/pull/1215/head#subdirectory=setup/product_packaging_level
   ```
 
 * **For >=v17:**
